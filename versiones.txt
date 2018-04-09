@@ -1,0 +1,11 @@
+commit 3812844feeacd3a0089903446cb3cf7e03dd0060
+Author: Jeremy Roa <jmra0611@gmail.com>
+Date:   Sun Apr 8 23:28:49 2018 -0400
+
+    Agregando clases bases
+
+commit 2f89dccf18caee2d93a5be0aaa55d10209d0c866
+Author: Danzarote <luishdaniel@gmail.com>
+Date:   Sun Apr 8 23:10:04 2018 -0400
+
+    Probando, probando
