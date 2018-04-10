@@ -17,6 +17,7 @@ class Cuser
 			std::string lname;
 			unsigned int age;
 			std::string sex;
+			
 	
 	public:
 			///Constructores
@@ -30,21 +31,21 @@ class Cuser
 			~Cuser();
 
 			///Observadores
-			long unsigned int get_id()const;
-			unsigned int get_age()const;
-			std::string get_sex()const;
-			std::string get_name()const;
-			std::string get_lname()const;
+			long unsigned int get_Id()const;
+			unsigned int get_Age()const;
+			std::string get_Sex()const;
+			std::string get_Name()const;
+			std::string get_Lname()const;
 
 			///Modificadores
-			void set_id(long unsigned int );
-			void set_age(unsigned int );
-			void set_sex(unsigned int );
-			void set_name(std::string );
-			void set_lname(std::string );
+			void set_Id(long unsigned int );
+			void set_Age(unsigned int );
+			void set_Sex(unsigned int );
+			void set_Name(std::string );
+			void set_Lname(std::string );
 
 			///Verifica si la cadena tiene numeros
-			bool contains_number(const std::string &);
+			bool contains_Number(const std::string &);
 };
 
 

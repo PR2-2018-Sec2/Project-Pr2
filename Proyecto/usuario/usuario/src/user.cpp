@@ -20,11 +20,11 @@ Cuser::Cuser ()
 ///Constructor por parametros
 Cuser::Cuser (long unsigned int a, std::string b, std::string c, unsigned int d, unsigned int e)
 {
-	this -> set_id(a);
-	this -> set_name(b);
-	this -> set_lname(c);
-	this -> set_age(d);
-	this -> set_sex(e);
+	this -> set_Id(a);
+	this -> set_Name(b);
+	this -> set_Lname(c);
+	this -> set_Age(d);
+	this -> set_Sex(e);
 }
 
 ///Constructor por copia
@@ -45,31 +45,31 @@ Cuser::~Cuser()
 ///Observadores
 
 ///Ver cedula
-long unsigned int Cuser::get_id() const
+long unsigned int Cuser::get_Id() const
 {
         return this -> id;
 }
 
 ///Ver edad
-unsigned int Cuser::get_age() const
+unsigned int Cuser::get_Age() const
 {
         return this -> age;
 }
 
 ///Ver sexo
-std::string Cuser::get_sex() const
+std::string Cuser::get_Sex() const
 {
         return this -> sex;
 }
 
 ///Ver nombre
-std::string Cuser::get_name() const
+std::string Cuser::get_Name() const
 {
         return this -> name;
 }
 
 ///Ver apellido
-std::string Cuser::get_lname() const
+std::string Cuser::get_Lname() const
 {
         return this -> lname;
 }
@@ -77,21 +77,21 @@ std::string Cuser::get_lname() const
 ///Modificadores
 
 ///Cambiar nombre
-void Cuser::set_name(std::string str)
+void Cuser::set_Name(std::string str)
 {
-        if(this -> contains_number(str) == 0)
+        if(this -> contains_Number(str) == 0)
                 this-> name = str;
 }
 
 ///Cambiar apellido
-void Cuser::set_lname(std::string str)
+void Cuser::set_Lname(std::string str)
 {
-        if(this -> contains_number(str) == 0)
+        if(this -> contains_Number(str) == 0)
                 this -> lname = str;
 }
 
 ///Cambiar edad
-void Cuser::set_age(unsigned int a)
+void Cuser::set_Age(unsigned int a)
 {
         if(a<150)              
                 this -> age = a;        
@@ -99,7 +99,7 @@ void Cuser::set_age(unsigned int a)
 }
 
 ///Cambiar sexo
-void Cuser::set_sex(unsigned int s)
+void Cuser::set_Sex(unsigned int s)
 {
         if(s == 0)
                 this -> sex = "Female";
@@ -109,14 +109,14 @@ void Cuser::set_sex(unsigned int s)
 }
 
 ///Cambiar id
-void Cuser::set_id(long unsigned int i)
+void Cuser::set_Id(long unsigned int i)
 {
         if(i> 0)
                 this -> id = i;
 }
 
 ///Verifica si la cadena tiene numeros
-bool Cuser::contains_number(const std::string &c)
+bool Cuser::contains_Number(const std::string &c)
 {
         return (c.find_first_of("0123456789") != std::string::npos);
 }
