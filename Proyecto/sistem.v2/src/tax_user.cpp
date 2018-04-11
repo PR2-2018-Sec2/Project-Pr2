@@ -9,7 +9,7 @@
 		this -> tax = 0;
 		this-> x_auto = Cautomobile();
 		this-> x_account = Cbank_account();
-		this-> x_housing = Housing();
+		this-> x_housing = CHousing();
 	}
 	/// Getters
 	long int Ctax_user::get_tax() const

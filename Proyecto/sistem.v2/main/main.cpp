@@ -53,32 +53,18 @@ void pr(Ctax_user& a){
 	
 
 	std::cout<<"**********************************HOUSING***********************************************"<<"\n\n";
-	std::cout<<std::left << std::setw(16)<<"Id";
 	std::cout<<std::left << std::setw(16)<<"Type";
 	std::cout<<std::left << std::setw(16)<<"Size";
-	std::cout<<std::left << std::setw(16)<<"Num rooms";
-	std::cout<<std::left << std::setw(16)<<"Num bath";
-	std::cout<<std::left << std::setw(16)<<"Max num p"<<"\n";
-	std::cout << "---------------------------------------------------------------------------------------\n";
-
-	std::cout<<std::left << std::setw(16)<<a.x_housing.get_num_Housing();
-	std::cout<<std::left << std::setw(16)<<a.x_housing.get_type_Housing();
-	std::cout<<std::left << std::setw(16)<<a.x_housing.get_size();
-	std::cout<<std::left << std::setw(16)<<a.x_housing.get_num_bedrooms();
-	std::cout<<std::left << std::setw(16)<<a.x_housing.get_num_bathrooms();
-	std::cout<<std::left << std::setw(16)<<a.x_housing.get_max_num_people()<<"\n";
-
-	std::cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
-	
-	std::cout<<std::left << std::setw(16)<<"Num par";
 	std::cout<<std::left << std::setw(16)<<"Valua";
 	std::cout<<std::left << std::setw(16)<<"State";
 	std::cout<<std::left << std::setw(16)<<"Address";
 	std::cout<<std::left << std::setw(16)<<"City"<<"\n";
-
+	
 	std::cout << "---------------------------------------------------------------------------------------\n";
 
-	std::cout<<std::left << std::setw(16)<<a.x_housing.get_num_parking();
+
+	std::cout<<std::left << std::setw(16)<<a.x_housing.get_type_housing();
+	std::cout<<std::left << std::setw(16)<<a.x_housing.get_size();
 	std::cout<<std::left << std::setw(16)<<a.x_housing.get_valuation();
 	std::cout<<std::left << std::setw(16)<<a.x_housing.get_state();
 	std::cout<<std::left << std::setw(16)<<a.x_housing.get_address();

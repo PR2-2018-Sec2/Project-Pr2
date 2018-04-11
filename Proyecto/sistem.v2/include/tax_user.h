@@ -22,7 +22,7 @@
 
 		Cautomobile x_auto;
 		Cbank_account x_account;
-		Housing x_housing;
+		CHousing x_housing;
 		//Constructor por defecto funcionando
 		Ctax_user();
 		//Constructor parametrico funcionando. Nos enredamps y se fue la luz
