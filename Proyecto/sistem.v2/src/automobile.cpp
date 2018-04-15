@@ -1,24 +1,28 @@
+
 /**
- * @file Cautomobille.cpp
+ * @file automobile.cpp
  * @date 10/04/2018
- * @authors Rafael Rivas, Samuel Aranda, Oriana Pedroza, Jeremy Roa, Laura Rosales
- * @note Emails
- * @note -ingrafaelrivascalderon@gmail.com
- * @note -jmra0611@gmail.com
- * @note -oriana.p@ula.ve
- * @brief Implementación de objeto Cautomobile
+ * @author Rafael Rivas
+ * @email ingrafaelrivascalderon@gmail.com
+ * @author Jeremy Roa
+ * @email jmra0611@gmail.com
+ * @author Oriana Pedroza
+ * @email ingrafaelrivascalderon@gmail.com
+ * @author Samuel Aranda
+ * @email ingrafaelrivascalderon@gmail.com
+ * @author Laura Rosales
+ * @email ingrafaelrivascalderon@gmail.com
+ * \~Spanish @brief Definiciones para el TDA Cautomobile  \~English @brief Cautomobile definitions
 */
 #include <iostream>
 #include <automobile.h>
 
+/// \~Spanish @name Constructores 
+/// \~English @name Constructor
 
-/**
- * Constructores
-*/
 
-/**
-  *@brief Constructor por defecto
-  */
+/// \~English @brief Default Constructor \~Spanish @brief Constructor por defecto
+
 Cautomobile::Cautomobile(){
     this->brand = "NULL";
     this->price = 0;
@@ -26,11 +30,11 @@ Cautomobile::Cautomobile(){
     this->year = 0;
     this->lin_plate = "ABCDEFG";
 }
- /**
-   * @brief Constructor por copia 
-   * @comment inicializa el valor de brand, price, model, year, lin_plate a partir de una copia del objeto Cautomobille.
-   * @&u_car objeto Cautomobile (copia)
-   */
+
+/// \~Spanish @brief Constructor por copia  \~English @brief Copied constructor
+/// \~Spanish @comment Inicializa el valor de marca, precio, modelo, año, placa a partir de una copia del objeto Cautomobille. \~English @comment Set values of brand, price, model, year, lin_plate from a copy
+/// \~Spanish @&u_car objeto Cautomobile (copia) \~English @&u_car Cautomobile object copy 
+
 Cautomobile::Cautomobile(const Cautomobile &u_car)
 {
     this->brand = u_car.get_brand();
@@ -38,15 +42,14 @@ Cautomobile::Cautomobile(const Cautomobile &u_car)
     this->model = u_car.get_model();
     this->year = u_car.get_year();
 }
- /**
-   * @brief Constructor parametrizado 
-   * @comment Inicializa el valor de brand, price, model, year, lin_plate por medio de valores dados por el usuario.
-   * @param u_brand Cadena de caracteres
-   * @param u_price Número de 1.00 en adelante
-   * @param u_model Cadena de caracteres
-   * @param u_year Año que va desde 1850 hasta 2018
-   * @param u_lin_plate Cadena de caracteres de longitud 7
-   */
+/// \~Spanish Constructor parametrico \~English Parametric constructor
+/// \~Spanish @comment Inicializa el valor de marca, precio, modelo, año, placa por medio de valores dados por el usuario. \~English @comment Set values brand, price, model, year, lin_plate
+/// \~Spanish @param u_brand Cadena de caracteres \~English @param u_brand string
+/// \~Spanish @param u_price Número de 1.00 en adelante \~English @param u_price unsigned int
+/// \~Spanish @param u_model Cadena de caracteres \~English @param u_model string
+/// \~Spanish @param u_year Año que va desde 1850 hasta 2018 \~English @param u_year unsigned int
+/// \~Spanish @param u_lin_plate Cadena de caracteres de longitud 7 \~English @param u_lin_plate string
+
 Cautomobile::Cautomobile(std::string u_brand,double u_price,std::string u_model,unsigned int u_year, std::string u_lin_plate)
 {
     this->set_brand(u_brand);
@@ -56,110 +59,103 @@ Cautomobile::Cautomobile(std::string u_brand,double u_price,std::string u_model,
     this->set_lin_plate(u_lin_plate);
 }
 
-/**
- * Getters
-*/
 
-/**
-* @brief Obtener la brand actual.
-* @return Un objeto Cautomobille, con la brand actual.
-*/
+/// \~Spanish @name  Observadores 
+/// \~English @name Getters
+
+/// \~Spanish @brief Ver marca  \~English @brief Get brand
+/// \~Spanish @return Maraca actual  \~English @return Current brand
+
 std::string Cautomobile::get_brand() const
 {
     return this->brand;
 }
-/**
-* @brief Obtener el price actual.
-* @return Un objeto Cautomobille, con el price actual.
-*/
+
+/// \~Spanish @brief Ver precio \~English @brief Get price 
+/// \~Spanish @return Precio actual \~English @return Current price
+
 double Cautomobile::get_price() const
 {
     return this->price;
 }
-/**
-* @brief Obtener la brand actual.
-* @return Un objeto Cautomobille, con la brand actual.
-*/
+
+/// \~Spanish @brief Ver modelo \~English @brief Get model
+/// \~Spanish @return Modelo actual \~English @return Current model
+
 std::string Cautomobile::get_model() const
 {
     return this->model;
 }
-/**
-* @brief Obtener el año actual.
-* @return Un objeto Cautomobile, con el año actual.
-*/
+
+/// \~Spanish @brief Ver año \~English @brief Get year
+/// \~Spanish @return Año actual \~English @return Current year
+
 unsigned int Cautomobile::get_year() const
 {
     return this->year;
 }
-/**
-* @brief Obtener la lin_plate actual.
-* @return Un objeto Cautomobile, con la lin_plate actual.
-*/
+
+/// \~Spanish @brief Ver placa \~English @brief Get lin plate
+/// \~Spanish  @return Placa actual \~English @return Current lin plate
+
 std::string Cautomobile::get_lin_plate() const
 {
     return this->lin_plate;
 }
 
 
-/**
- * Setters
-*/
+/// \~Spanish @name Actuadores 
+///\~English @name Setters
 
+/// \~Spanish  @brief Cambiar modelo \~English @brief Changing brand value
+/// \~Spanish @param Cadena \~English @param String
 
-/**
-  *@brief set_brand Modifica el valor de brand
-  *@param u_brand Cadena de caracteres
-*/
 void Cautomobile::set_brand(const std::string u_brand)
 {
     this->brand = u_brand;
 }
 
+/// \~Spanish @brief Cambiar precio \~English @brief Changing price value
+/// \~Spanish @param Numero de doble precision \~English @param Double precision number
 
-/**
-   *@brief set_price Modifica el valor de price
-   *@param u_price Número de doble precisión
-  */
 void Cautomobile::set_price(const double u_price)
 {
     if(u_price >= 1.00) this->price = u_price;
     else throw std::domain_error("Price is negative or zero");
 }
 
-/**
-  *@brief set_model Modifica el valor de model
-  *@param u_model Cadena de caracteres
-*/
+/// \~Spanish @brief Modifica el valor de modelo \~English @brief Changing model value
+/// \~Spanish @param Cadena de caracteres \~English @param string
+
 void Cautomobile::set_model(const std::string u_model)
 {
     this->model = u_model;
 } 
 
-/**
-  *@brief set_year Modifica el valor de year y mayor a 1850
-  *@param u_year Número de entero sin signo
-*/
+/// \~Spanish @brief Modifica el valor de año y mayor a 1850 \~English @brief Changing year value
+/// \~Spanish @param Número de entero sin signo \~English @param unsigned int
+
 void Cautomobile::set_year(const unsigned int u_year){
     if((u_year >= 1850) && (u_year <= 2018)) this->year = u_year;
     else throw std::domain_error("Invalided year");
 }
 
-/**
-  *@brief set_lin_plate Modifica el valor de lin_plate
-  *@param u_lin_plate Cadena de caracteres
-  */
+/// \~Spanish @brief  Modifica el valor de placa \~English @brief Changing lin plate value
+/// \~Spanish @param Cadena de caracteres \~English @param string
+
 void Cautomobile::set_lin_plate(const std::string u_lin_plate)
 {
     if(u_lin_plate.size() == 7 ) this->lin_plate = u_lin_plate;
     else throw std::invalid_argument("Incorrect lin plate");
 }
 
-/**
-  *@brief sobrecarga del operador = 
-  *@param objeto Cautomobile
-  *@return objeto Cautomobile
-  */
+/// \~Spanish @name Sobrecarga de operadores  
+///\~English @name Operator's overload
+
+/// \~Spanish @brief Sobrecarga del operador = \~English @brief Operator overload =
+/// \~Spanish @param Objeto Cautomobile \~English @param Cautomobile object
+/// \~Spanish @return Referencia a un objeto Cautomobile \~English @return Cautomobile reference
+
 Cautomobile& Cautomobile::operator=(const Cautomobile u_Cautomobile)
 {
     this->brand = u_Cautomobile.get_brand();
@@ -169,11 +165,11 @@ Cautomobile& Cautomobile::operator=(const Cautomobile u_Cautomobile)
 
     return (*this);
 }
-/**
-  *@brief sobrecarga del operador == 
-  *@param objeto Cautomobille
-  *@return TRUE or False
-  */
+
+/// \~Spanish @brief Sobrecarga del operador == \~English @brief Operator overload ==
+/// \~Spanish @param Objeto Cautomobile \~English @param Cautomobile object
+/// \~Spanish @return TRUE or FALSE \~English @return TRUE or FALSE
+
 bool Cautomobile::operator==(const Cautomobile u_Cautomobile)
 {
     Cautomobile aux = *this;

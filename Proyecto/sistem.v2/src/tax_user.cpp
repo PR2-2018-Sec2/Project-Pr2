@@ -1,23 +1,44 @@
+/**
+ * @file tax_user.cpp
+ * @date 10/04/2018
+ * @email ingrafaelrivascalderon@gmail.com
+ * @author Jeremy Roa
+ * @email jmra0611@gmail.com
+ * @author Oriana Pedroza
+ * @email ingrafaelrivascalderon@gmail.com
+ * 
+ * \~Spanish @brief Definiciones para el TDA Ctax_user  \~English @brief Ctax_user definitions
+*/
+
 #include <tax_user.h>
 
-	Ctax_user::Ctax_user(){
-		this -> set_id(00000001);
-		this -> set_name("NAME");
-		this -> set_lname("LASTNAME");
-		this -> set_age(19);
-		this -> set_sex(1);
+	/// \~Spanish @name Constructores 
+	///\~English @name Constructor
+
+
+	/// \~English @brief Default Constructor \~Spanish @brief Constructor por defecto
+	Ctax_user::Ctax_user(): Cuser(){
 		this -> tax = 0;
 		this-> x_auto = Cautomobile();
 		this-> x_account = Cbank_account();
 		this-> x_housing = CHousing();
 	}
-	/// Getters
+
+	/// \~Spanish @name Observadores 
+	///\~English @name Getters
+
+	/// \~Spanish @brief Ver impuesto  \~English @brief Get tax
+	/// \~Spanish @return impuesto actual  \~English @return Current tax
 	long int Ctax_user::get_tax() const
 	{
 		return this->tax;
 	}
 
-	/// Setters
+	/// \~Spanish @name Actuadores 
+	///\~English @name Setters
+
+	/// \~Spanish @brief Cambiar impuesto \~English @brief Changing tax value
+	/// \~Spanish @param cadena\~English @param string
 	void Ctax_user::set_tax(long int u_tax){
 		this-> tax = u_tax;
 	}

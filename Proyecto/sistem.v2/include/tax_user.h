@@ -1,9 +1,38 @@
 /**
- * @file impuesto.h
- * @date 10/04/2018
- * @authors Teammates
- * @brief Implementación del objeto Ctax_user 
- * @note Acomodado por todos
+ * @file tax_user.h
+ * \~English @name Ctax_user object
+ * \~Spanish @name Objeto Ctax_user
+ * \~English @class Ctax_user
+ * \~Spanish @class Ctax_user
+ * \~Spanish @brief Implementación de objeto Impuesto
+ * \~English @brief Tax object implementation
+
+ * \~English @details This class Tax have all atributes related to a tax
+ * @author Rafael Rivas
+ * @email ingrafaelrivascalderon@gmail.com
+ * @author Jeremy Roa
+ * @email jmra0611@gmail.com
+ * @author Oriana Pedroza
+ * @email ingrafaelrivascalderon@gmail.com
+ * \~Spanish @details La siguiente clase posee los atributos basicos de un impuesto
+ * @author Rafael Rivas
+ * @email ingrafaelrivascalderon@gmail.com
+ * @author Jeremy Roa
+ * @email jmra0611@gmail.com
+ * @author Oriana Pedroza
+ * @email ingrafaelrivascalderon@gmail.com
+ *
+ * \~Spanish @nota
+ * Los atributos que posee son: 
+ *
+ *   - Impuesto
+
+ * 
+ * \~English @note     
+ * The atributes are
+ *    
+ *   - Tax
+
 */
 #ifndef TAX_USER_H
 #define TAX_USER_H
@@ -17,19 +46,26 @@
 	{
 	private:
 		long int tax;
-
+		
 	public:
 
+		
 		Cautomobile x_auto;
 		Cbank_account x_account;
 		CHousing x_housing;
-		//Constructor por defecto funcionando
+
+
+        /// \~Spanish Constructor por defecto \~English Default constructor
 		Ctax_user();
 		//Constructor parametrico funcionando. Nos enredamps y se fue la luz
 		//Este recibe objetos que se instancian y se modifican en el main, para no tener que estar enviando dato por dato y que la definicion sea muy larga
 		//Ctax_user(Cuser, Cautomobile, Cbank_account, Housing);
 		~Ctax_user(){};
+
+		// \~Spanish Observadores \~English Getters
 		long int get_tax() const;
+
+		// \~Spanish Actuadores \~English Setters
 		void set_tax(long int);
 
 	};

@@ -1,0 +1,339 @@
+\hypertarget{class_cuser}{}\section{Referencia de la Clase Cuser}
+\label{class_cuser}\index{Cuser@{Cuser}}
+
+
+Implementación de objeto usuario.  
+
+
+
+
+{\ttfamily \#include $<$user.\+h$>$}
+
+
+
+Diagrama de herencias de Cuser
+% FIG 0
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries contains\+\_\+number} (const std\+::string \&)\hypertarget{class_cuser_a110db4f47ac17223247019cbb6535fe1}{}\label{class_cuser_a110db4f47ac17223247019cbb6535fe1}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Constructores}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cuser_a28d26161b1076a72f30e41d52132e636}{Cuser} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_cuser_a6c2305c658e82cd50ec20778069b1539}{Cuser} (const \hyperlink{class_cuser}{Cuser} \&p)
+\begin{DoxyCompactList}\small\item\em Constructor por copia. \end{DoxyCompactList}\item 
+\hyperlink{class_cuser_af6aa55b35e256a681069a15b9a2931a2}{Cuser} (long unsigned int, std\+::string, std\+::string, unsigned int, std\+::string, std\+::string)
+\begin{DoxyCompactList}\small\item\em Constructor parametrico. \end{DoxyCompactList}\item 
+\hyperlink{class_cuser_a42e6967197e231f8a62d5d2c86451ca4}{$\sim$\+Cuser} ()\hypertarget{class_cuser_a42e6967197e231f8a62d5d2c86451ca4}{}\label{class_cuser_a42e6967197e231f8a62d5d2c86451ca4}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Observadores}\par
+\begin{DoxyCompactItemize}
+\item 
+long unsigned int \hyperlink{class_cuser_a06efeb2dbb2bbccab0e8997eebd2da47}{get\+\_\+id} () const 
+\begin{DoxyCompactList}\small\item\em Ver id. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_cuser_a8611793c31edced138685b0d1989dc3c}{get\+\_\+age} () const 
+\begin{DoxyCompactList}\small\item\em Ver edad. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_cuser_a5847a7846126a599ff20d32fd82f0105}{get\+\_\+sex} () const 
+\begin{DoxyCompactList}\small\item\em Ver sexo. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_cuser_a34ee78b8655c4439528e1d63a5974683}{get\+\_\+name} () const 
+\begin{DoxyCompactList}\small\item\em Ver nombre. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_cuser_afa69506b9d0b6aa61a669c20e7e4862d}{get\+\_\+lname} () const 
+\begin{DoxyCompactList}\small\item\em Ver apellido. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_cuser_ac5b9b699501987e6fc957366a81a1248}{get\+\_\+password} () const 
+\begin{DoxyCompactList}\small\item\em Ver clave. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Actuadores}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_cuser_af24e3067528b741a49410b0372f4ef42}{set\+\_\+id} (long unsigned int)
+\begin{DoxyCompactList}\small\item\em Cambiar id. \end{DoxyCompactList}\item 
+void \hyperlink{class_cuser_a21de7d9c58f6128adc959e2c008b7deb}{set\+\_\+age} (unsigned int)
+\begin{DoxyCompactList}\small\item\em Cambiar edad. \end{DoxyCompactList}\item 
+void \hyperlink{class_cuser_a5e3c1e2f75f9638714423f1372ea098a}{set\+\_\+sex} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Cambiar sexo. \end{DoxyCompactList}\item 
+void \hyperlink{class_cuser_a54a15a99fc54cd882e87bb1ba66c3434}{set\+\_\+name} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Cambiar nombre. \end{DoxyCompactList}\item 
+void \hyperlink{class_cuser_a4062d5c81e4aafbb7ac0b9256df66b71}{set\+\_\+lname} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Cambiar apellido. \end{DoxyCompactList}\item 
+void \hyperlink{class_cuser_ab1b88a55109edbfb16d6c05fc093fd1e}{set\+\_\+password} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Cambiar clave. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Descripción detallada}
+Implementación de objeto usuario. 
+
+La siguiente clase posee los atributos basicos de un usuario \begin{DoxyDate}{Fecha}
+10/04/2018 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Autor}
+Raul Rojas  
+
+Diego Benitez  
+
+Luis Hernandez  
+
+Gabriel Guerrero  
+
+Alberto Calderon 
+\end{DoxyAuthor}
+Los atributos que posee son\+:
+
+
+\begin{DoxyItemize}
+\item Id codigo de identificacion
+\item Nombre
+\item Apellido
+\item Edad
+\item Sexo 
+\end{DoxyItemize}
+
+\subsection{Documentación del constructor y destructor}
+\index{Cuser@{Cuser}!Cuser@{Cuser}}
+\index{Cuser@{Cuser}!Cuser@{Cuser}}
+\subsubsection[{\texorpdfstring{Cuser()}{Cuser()}}]{\setlength{\rightskip}{0pt plus 5cm}Cuser\+::\+Cuser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cuser_a28d26161b1076a72f30e41d52132e636}{}\label{class_cuser_a28d26161b1076a72f30e41d52132e636}
+
+
+Constructor. 
+
+Constructor por defecto. \index{Cuser@{Cuser}!Cuser@{Cuser}}
+\index{Cuser@{Cuser}!Cuser@{Cuser}}
+\subsubsection[{\texorpdfstring{Cuser(const Cuser \&p)}{Cuser(const Cuser &p)}}]{\setlength{\rightskip}{0pt plus 5cm}Cuser\+::\+Cuser (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cuser} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cuser_a6c2305c658e82cd50ec20778069b1539}{}\label{class_cuser_a6c2305c658e82cd50ec20778069b1539}
+
+
+Constructor por copia. 
+
+Inicializa el valor de id, nombre, apellido, edad, sexo, clave a partir de una copia del objeto Cautomobille. \&p objeto \hyperlink{class_cuser}{Cuser} (copia) \index{Cuser@{Cuser}!Cuser@{Cuser}}
+\index{Cuser@{Cuser}!Cuser@{Cuser}}
+\subsubsection[{\texorpdfstring{Cuser(long unsigned int, std\+::string, std\+::string, unsigned int, std\+::string, std\+::string)}{Cuser(long unsigned int, std::string, std::string, unsigned int, std::string, std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}Cuser\+::\+Cuser (
+\begin{DoxyParamCaption}
+\item[{long unsigned int}]{a, }
+\item[{std\+::string}]{b, }
+\item[{std\+::string}]{c, }
+\item[{unsigned int}]{d, }
+\item[{std\+::string}]{e, }
+\item[{std\+::string}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cuser_af6aa55b35e256a681069a15b9a2931a2}{}\label{class_cuser_af6aa55b35e256a681069a15b9a2931a2}
+
+
+Constructor parametrico. 
+
+Constructor parametrico  Inicializa el valor de id, nombre, apellido, edad, sexo, clave por medio de valores dados por el usuario. 
+\begin{DoxyParams}{Parámetros}
+{\em id} & Entero largo sin signo \\
+\hline
+{\em name} & cadena \\
+\hline
+{\em lname} & cadena \\
+\hline
+{\em age} & entero sin signo \\
+\hline
+{\em sex} & cadena \\
+\hline
+{\em password} & cadena \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentación de las funciones miembro}
+\index{Cuser@{Cuser}!get\+\_\+age@{get\+\_\+age}}
+\index{get\+\_\+age@{get\+\_\+age}!Cuser@{Cuser}}
+\subsubsection[{\texorpdfstring{get\+\_\+age() const }{get_age() const }}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Cuser\+::get\+\_\+age (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_cuser_a8611793c31edced138685b0d1989dc3c}{}\label{class_cuser_a8611793c31edced138685b0d1989dc3c}
+
+
+Ver edad. 
+
+\begin{DoxyReturn}{Devuelve}
+edad actual 
+\end{DoxyReturn}
+\index{Cuser@{Cuser}!get\+\_\+id@{get\+\_\+id}}
+\index{get\+\_\+id@{get\+\_\+id}!Cuser@{Cuser}}
+\subsubsection[{\texorpdfstring{get\+\_\+id() const }{get_id() const }}]{\setlength{\rightskip}{0pt plus 5cm}long unsigned int Cuser\+::get\+\_\+id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_cuser_a06efeb2dbb2bbccab0e8997eebd2da47}{}\label{class_cuser_a06efeb2dbb2bbccab0e8997eebd2da47}
+
+
+Ver id. 
+
+\begin{DoxyReturn}{Devuelve}
+id actual 
+\end{DoxyReturn}
+\index{Cuser@{Cuser}!get\+\_\+lname@{get\+\_\+lname}}
+\index{get\+\_\+lname@{get\+\_\+lname}!Cuser@{Cuser}}
+\subsubsection[{\texorpdfstring{get\+\_\+lname() const }{get_lname() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Cuser\+::get\+\_\+lname (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_cuser_afa69506b9d0b6aa61a669c20e7e4862d}{}\label{class_cuser_afa69506b9d0b6aa61a669c20e7e4862d}
+
+
+Ver apellido. 
+
+\begin{DoxyReturn}{Devuelve}
+Apellido actual 
+\end{DoxyReturn}
+\index{Cuser@{Cuser}!get\+\_\+name@{get\+\_\+name}}
+\index{get\+\_\+name@{get\+\_\+name}!Cuser@{Cuser}}
+\subsubsection[{\texorpdfstring{get\+\_\+name() const }{get_name() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Cuser\+::get\+\_\+name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_cuser_a34ee78b8655c4439528e1d63a5974683}{}\label{class_cuser_a34ee78b8655c4439528e1d63a5974683}
+
+
+Ver nombre. 
+
+\begin{DoxyReturn}{Devuelve}
+Nombre actual 
+\end{DoxyReturn}
+\index{Cuser@{Cuser}!get\+\_\+password@{get\+\_\+password}}
+\index{get\+\_\+password@{get\+\_\+password}!Cuser@{Cuser}}
+\subsubsection[{\texorpdfstring{get\+\_\+password() const }{get_password() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Cuser\+::get\+\_\+password (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_cuser_ac5b9b699501987e6fc957366a81a1248}{}\label{class_cuser_ac5b9b699501987e6fc957366a81a1248}
+
+
+Ver clave. 
+
+\begin{DoxyReturn}{Devuelve}
+Clave actual 
+\end{DoxyReturn}
+\index{Cuser@{Cuser}!get\+\_\+sex@{get\+\_\+sex}}
+\index{get\+\_\+sex@{get\+\_\+sex}!Cuser@{Cuser}}
+\subsubsection[{\texorpdfstring{get\+\_\+sex() const }{get_sex() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Cuser\+::get\+\_\+sex (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_cuser_a5847a7846126a599ff20d32fd82f0105}{}\label{class_cuser_a5847a7846126a599ff20d32fd82f0105}
+
+
+Ver sexo. 
+
+\begin{DoxyReturn}{Devuelve}
+sexo actual 
+\end{DoxyReturn}
+\index{Cuser@{Cuser}!set\+\_\+age@{set\+\_\+age}}
+\index{set\+\_\+age@{set\+\_\+age}!Cuser@{Cuser}}
+\subsubsection[{\texorpdfstring{set\+\_\+age(unsigned int)}{set_age(unsigned int)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cuser\+::set\+\_\+age (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cuser_a21de7d9c58f6128adc959e2c008b7deb}{}\label{class_cuser_a21de7d9c58f6128adc959e2c008b7deb}
+
+
+Cambiar edad. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Entero} & sin signo \\
+\hline
+\end{DoxyParams}
+\index{Cuser@{Cuser}!set\+\_\+id@{set\+\_\+id}}
+\index{set\+\_\+id@{set\+\_\+id}!Cuser@{Cuser}}
+\subsubsection[{\texorpdfstring{set\+\_\+id(long unsigned int)}{set_id(long unsigned int)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cuser\+::set\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{long unsigned int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cuser_af24e3067528b741a49410b0372f4ef42}{}\label{class_cuser_af24e3067528b741a49410b0372f4ef42}
+
+
+Cambiar id. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Entero} & sin signo largo \\
+\hline
+\end{DoxyParams}
+\index{Cuser@{Cuser}!set\+\_\+lname@{set\+\_\+lname}}
+\index{set\+\_\+lname@{set\+\_\+lname}!Cuser@{Cuser}}
+\subsubsection[{\texorpdfstring{set\+\_\+lname(std\+::string)}{set_lname(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cuser\+::set\+\_\+lname (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cuser_a4062d5c81e4aafbb7ac0b9256df66b71}{}\label{class_cuser_a4062d5c81e4aafbb7ac0b9256df66b71}
+
+
+Cambiar apellido. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Cadena} & \\
+\hline
+\end{DoxyParams}
+\index{Cuser@{Cuser}!set\+\_\+name@{set\+\_\+name}}
+\index{set\+\_\+name@{set\+\_\+name}!Cuser@{Cuser}}
+\subsubsection[{\texorpdfstring{set\+\_\+name(std\+::string)}{set_name(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cuser\+::set\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cuser_a54a15a99fc54cd882e87bb1ba66c3434}{}\label{class_cuser_a54a15a99fc54cd882e87bb1ba66c3434}
+
+
+Cambiar nombre. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Cadena} & \\
+\hline
+\end{DoxyParams}
+\index{Cuser@{Cuser}!set\+\_\+password@{set\+\_\+password}}
+\index{set\+\_\+password@{set\+\_\+password}!Cuser@{Cuser}}
+\subsubsection[{\texorpdfstring{set\+\_\+password(std\+::string)}{set_password(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cuser\+::set\+\_\+password (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cuser_ab1b88a55109edbfb16d6c05fc093fd1e}{}\label{class_cuser_ab1b88a55109edbfb16d6c05fc093fd1e}
+
+
+Cambiar clave. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Cadena} & \\
+\hline
+\end{DoxyParams}
+\index{Cuser@{Cuser}!set\+\_\+sex@{set\+\_\+sex}}
+\index{set\+\_\+sex@{set\+\_\+sex}!Cuser@{Cuser}}
+\subsubsection[{\texorpdfstring{set\+\_\+sex(std\+::string)}{set_sex(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cuser\+::set\+\_\+sex (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cuser_a5e3c1e2f75f9638714423f1372ea098a}{}\label{class_cuser_a5e3c1e2f75f9638714423f1372ea098a}
+
+
+Cambiar sexo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Cadena} & \\
+\hline
+\end{DoxyParams}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{user_8h}{user.\+h}\item 
+scr/\hyperlink{user_8cpp}{user.\+cpp}\end{DoxyCompactItemize}
