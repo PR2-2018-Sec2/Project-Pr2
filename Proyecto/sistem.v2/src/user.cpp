@@ -199,7 +199,39 @@ throw std::domain_error("the password must be over 8 character");
 
 /// \~Spanish  @brief Cadenas con numeros\~English @brief contains numbers
 /// \~Spanish @param Cadena \~English @param String
-bool contains_number(const std::string &c)
+bool Cuser::contains_number(const std::string &c)
 {
         return (c.find_first_of("0123456789") != std::string::npos);
+}
+
+/// \~Spanish @name Sobrecarga de operadores  
+///\~English @name Operator's overload
+
+/// \~Spanish @brief Sobrecarga del operador = \~English @brief Operator overload =
+/// \~Spanish @param Objeto Cuser \~English @param Cuser object
+/// \~Spanish @return Referencia a un objeto Cuser \~English @return Cuser reference
+Cuser& Cuser::operator=(const Cuser aux_Cuser)
+{
+    this-> id = aux_Cuser.get_id();
+    this-> name = aux_Cuser.get_name();
+    this-> lname = aux_Cuser.get_lname();
+    this-> age = aux_Cuser.get_age();
+    this-> sex = aux_Cuser.get_sex();
+    this -> password = aux_Cuser.get_password();
+
+    return (*this);
+}
+
+/// \~Spanish @brief Sobrecarga del operador == \~English @brief Operator overload ==
+/// \~Spanish @param Objeto Cuser \~English @param Cuser object
+/// \~Spanish @return TRUE or FALSE \~English @return TRUE or FALSE
+
+bool Cuser::operator==(const Cuser aux_Cuser)
+{
+    Cuser aux = *this;
+    return(aux.get_name() == aux_Cuser.get_name())
+           and (aux.get_lname() == aux_Cuser.get_lname()) 
+           and (aux.get_age() == aux_Cuser.get_age()) 
+           and (aux.get_sex() == aux_Cuser.get_sex())
+           and (aux.get_password() == aux_Cuser.get_password());
 }

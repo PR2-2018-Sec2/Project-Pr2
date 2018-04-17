@@ -86,3 +86,21 @@ void Cbank_account::set_account_number(const std::string acc)
 		throw std::invalid_argument("Invalided account");
 	}
 }
+
+/// \~Spanish @name Sobrecarga de operadores  
+///\~English @name Operator's overload
+
+/// \~Spanish @brief Sobrecarga del operador = \~English @brief Operator overload =
+/// \~Spanish @param Objeto Cbank_account \~English @param Cbank_account object
+/// \~Spanish @return Referencia a un objeto Cbank_account \~English @return Cbank_account reference
+Cbank_account Cbank_account::operator=(const Cbank_account& p){
+	this->balance = p.balance;
+	this->account_number = p.account_number;
+	return (*this);
+}
+/// \~Spanish @brief Sobrecarga del operador == \~English @brief Operator overload ==
+/// \~Spanish @param Objeto Cbank_account \~English @param CHousing object
+/// \~Spanish @return TRUE or FALSE \~English @return TRUE or FALSE
+bool Cbank_account::operator==(const Cbank_account& p){
+	return((this->balance == p.balance ) && (this->account_number == p.account_number));
+}

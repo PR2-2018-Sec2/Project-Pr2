@@ -90,6 +90,9 @@ class CHousing{
         void set_valuation(const float);
         void set_address(const std::string);
         void set_city(const std::string);
+
+        CHousing operator=(const CHousing&);
+		bool operator==(const CHousing&);
 };
 
 #endif

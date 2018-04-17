@@ -1,12 +1,12 @@
-digraph "include/user.h"
+digraph "/home/maferg/pr2/proyectprepa/mafer/otro/Project-Pr2/Proyecto/sistem.v2/include/user.h"
 {
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="include/user.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="/home/maferg/pr2/proyectprepa\l/mafer/otro/Project-Pr2/Proyecto\l/sistem.v2/include/user.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
-  Node2 [label="include/tax_user.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tax__user_8h.html"];
+  Node2 [label="/home/maferg/pr2/proyectprepa\l/mafer/otro/Project-Pr2/Proyecto\l/sistem.v2/include/tax_user.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tax__user_8h.html"];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
-  Node3 [label="scr/tax_user.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tax__user_8cpp.html",tooltip="Ctax_user definitions. "];
+  Node3 [label="/home/maferg/pr2/proyectprepa\l/mafer/otro/Project-Pr2/Proyecto\l/sistem.v2/src/tax_user.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tax__user_8cpp.html",tooltip="Ctax_user definitions. "];
   Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
-  Node4 [label="scr/user.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$user_8cpp.html",tooltip="Cuser definitions. "];
+  Node4 [label="/home/maferg/pr2/proyectprepa\l/mafer/otro/Project-Pr2/Proyecto\l/sistem.v2/src/user.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$user_8cpp.html",tooltip="Cuser definitions. "];
 }

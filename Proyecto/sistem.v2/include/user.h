@@ -95,6 +95,9 @@ class Cuser
 
 		// \~Spanish Verifica si la cadena contiene numeros \~English Check if string has numbers
 		bool contains_number(const std::string &);
+
+		Cuser& operator=(const Cuser);
+		bool operator==(const Cuser);
 };
 
 

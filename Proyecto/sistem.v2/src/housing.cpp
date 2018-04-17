@@ -151,3 +151,29 @@ void CHousing::set_city(const std::string n){
      this->city = n;
 }
 
+/// \~Spanish @name Sobrecarga de operadores  
+///\~English @name Operator's overload
+
+/// \~Spanish @brief Sobrecarga del operador = \~English @brief Operator overload =
+/// \~Spanish @param Objeto CHousing \~English @param CHousing object
+/// \~Spanish @return Referencia a un objeto CHousing \~English @return CHousing reference
+CHousing CHousing::operator=(const CHousing& p){
+    this->type_housing = p.type_housing;
+    this->size = p.size;
+    this->state = p.state;
+    this->valuation = p.valuation;
+    this->address = p.address;
+    this->city = p.city;
+    return (*this);
+}
+/// \~Spanish @brief Sobrecarga del operador == \~English @brief Operator overload ==
+/// \~Spanish @param Objeto CHousing \~English @param CHousing object
+/// \~Spanish @return TRUE or FALSE \~English @return TRUE or FALSE
+bool CHousing::operator==(const CHousing& p){;
+    return((this->type_housing == p.get_type_housing()) 
+           and (this->size == p.get_size()) 
+           and (this->state == p.get_state()) 
+           and (this->valuation == p.get_valuation())
+           and (this->address == p.get_address())
+           and(this->city == p.get_address()) ) ;
+}

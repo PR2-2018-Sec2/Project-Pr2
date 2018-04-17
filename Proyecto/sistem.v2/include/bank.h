@@ -57,6 +57,9 @@ class Cbank_account {
         void set_balance (const double);
         void set_account_number (const std::string);
 
+        Cbank_account operator=(const Cbank_account&);
+	bool operator==(const Cbank_account&);
+
 };
 
 #endif
