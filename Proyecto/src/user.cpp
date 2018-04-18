@@ -1,268 +1,224 @@
 /**
  *  @file user.cpp
- *  @name user.cpp
  *  @author Raul Rojas 
  *  @author Diego Benitez 
  *  @author Luis Hernandez 
  *  @author Gabriel Guerrero   
  *  @author Alberto Calderon.
  *  @date 5/3/2018
- *  @brief Definiciones para el TDA Cuser
+ *  \~Spanish @brief Definiciones para el TDA Cuser  \~English @brief Cuser definitions 
 */
 #include <user.h>
 #include <iostream>
 
-/**
- * Constructores
-*/
+/// \~Spanish @name Constructores
+/// \~English @name Constructor
 
-/**
- * @brief Constructor por defecto 
-*/
-Cuser::Cuser ()
+/// \~English @brief Default Constructor \~Spanish @brief Constructor por defecto
+Cuser::Cuser()
 {
-        this -> id=00000001;
-        this -> name="NAME";
-        this -> lname="LASTNAME";
-        this -> age=19;
-        this -> sex='O';
-        this -> password="NULL";
+        this->id = 00000001;
+        this->name = "NAME";
+        this->lname = "LASTNAME";
+        this->age = 19;
+        this->sex = 'O';
+        this->password = "NULL";
 }
 
-/**
-  * @brief Constructor parametrizado
-  * @comment Inicializa el valor de id, name, last name, age, sex y password por medio de valores dados por el usuario.
-  * @param u_id Long unsigned int
-  * @param u_name Cadena de caracteres
-  * @param u_lname Cadena de caracteres
-  * @param u_age Unsigned int
-  * @param u_lsex Char
-  * @param u_set_password Cadena de caracteres que debe incluir al menos un caracter especial, un numero y mayuscula. 
-*/
-Cuser::Cuser (long unsigned int a, std::string b, std::string c, unsigned int d, char e, std::string f)
+/// \~Spanish Constructor parametrico \~English Parametric constructor
+/// \~Spanish @comment Inicializa el valor de id, nombre, apellido, edad, sexo, clave por medio de valores dados por el usuario. \~English @comment Set values id, name, last name, sex age and password
+/// \~Spanish @param id Entero largo sin signo \~English @param id long int
+/// \~Spanish @param name cadena \~English @param name string
+/// \~Spanish @param lname cadena \~English @param lname cadena
+/// \~Spanish @param age entero sin signo \~English @param lname unsigned int
+/// \~Spanish @param sex cadena\~English @param sex string
+/// \~Spanish @param password cadena \~English @param password cadena
+Cuser::Cuser(long unsigned int a, std::string b, std::string c, unsigned int d, char e, std::string f)
 {
-	this -> set_id(a);
-	this -> set_name(b);
-	this -> set_lname(c);
-	this -> set_age(d);
-	this -> set_sex(e);
-        this -> set_password(f);
+        this->set_id(a);
+        this->set_name(b);
+        this->set_lname(c);
+        this->set_age(d);
+        this->set_sex(e);
+        this->set_password(f);
 }
-/**
- * @brief Constructor por copia
- * @comment Inicializa el valor de id, name, last name, age, sex y password a partir de un objeto Cuser.
- * @&u_p objeto Cuser (copia)
-*/
+/// \~Spanish @brief Constructor por copia  \~English @brief Copied constructor
+/// \~Spanish @brief Inicializa el valor de id, nombre, apellido, edad, sexo, clave a partir de una copia del objeto Cautomobille. \~English @brief Set values id, name, last name, sex age and password
+/// \~Spanish @&p objeto Cuser (copia) \~English @&u_car Cuser object copy
 Cuser::Cuser(const Cuser &p)
 {
-	this -> id = p.id;
-	this -> name = p.name;
-	this -> lname = p.lname;
-	this -> age = p.age;
-	this -> sex= p.sex;
-        this -> password = p.password;
+        this->id = p.id;
+        this->name = p.name;
+        this->lname = p.lname;
+        this->age = p.age;
+        this->sex = p.sex;
+        this->password = p.password;
 }
 
-/**
- * @brief Destructor
-*/
-Cuser::~Cuser()
-{
-}
+/// \~Spanish @brief Destructor \~English @brief Destructor
+Cuser::~Cuser() {}
 
-/**
- * Getters 
-*/
+/// \~Spanish @name Observadores
+///\~English @name Getters
 
-/**
- * @brief Obtener la id actual.
- * @return Un objeto Cuser, con la id actual.
-*/
+/// \~Spanish @brief Ver id  \~English @brief Get id
+/// \~Spanish @return id actual  \~English @return Current id
 long unsigned int Cuser::get_id() const
 {
-        return this -> id;
+        return this->id;
 }
 
-/**
- * @brief Obtener la age actual.
- * @return Un objeto Cuser, con la age actual.
-*/
+/// \~Spanish @brief Ver edad  \~English @brief Get age
+/// \~Spanish @return edad actual  \~English @return Current age
 unsigned int Cuser::get_age() const
 {
-        return this -> age;
+        return this->age;
 }
 
-/**
- * @brief Obtener el sex actual.
- * @return Un objeto Cuser, con el sex actual.
-*/
+/// \~Spanish @brief Ver sexo  \~English @brief Get sex
+/// \~Spanish @return sexo actual  \~English @return Current sex
 char Cuser::get_sex() const
 {
-        return this -> sex;
+        return this->sex;
 }
 
-/**
- * @brief Obtener el name actual.
- * @return Un objeto Cuser, con el name actual.
-*/
+/// \~Spanish @brief Ver nombre  \~English @brief Get name
+/// \~Spanish @return Nombre actual  \~English @return Current name
 std::string Cuser::get_name() const
 {
-        return this -> name;
+        return this->name;
 }
 
-/**
- * @brief Obtener el lname actual.
- * @return Un objeto Cuser, con el lname actual.
-*/
+/// \~Spanish @brief Ver apellido  \~English @brief Get last name
+/// \~Spanish @return Apellido actual  \~English @return Current last name
 std::string Cuser::get_lname() const
 {
-        return this -> lname;
+        return this->lname;
 }
 
-/**
- * @brief Obtener la password actual.
- * @return Un objeto Cuser, con la password actual.
-*/
-std::string Cuser::get_password()const
+/// \~Spanish @brief Ver clave  \~English @brief Get password
+/// \~Spanish @return Clave actual  \~English @return Current password
+
+std::string Cuser::get_password() const
 {
 
-return this -> password;
-
+        return this->password;
 }
 
-/**
- * Setters
-*/
+/// \~Spanish @name Actuadores
+///\~English @name Setters
 
-/**
- * @brief set_name Modifica el valor de name
- * @param u_name Cadena de caracteres
-*/
+/// \~Spanish  @brief Cambiar nombre \~English @brief Changing nombre value
+/// \~Spanish @param Cadena \~English @param String
 void Cuser::set_name(std::string str)
 {
-        if(this -> contains_number(str) == 0)
-                this-> name = str;
+        if (this->contains_number(str) == 0)
+                this->name = str;
 }
 
-/**
- * @brief set_lname Modifica el valor de lname
- * @param u_lname Cadena de caracteres
-*/
+/// \~Spanish  @brief Cambiar apellido \~English @brief Changing lname value
+/// \~Spanish @param Cadena \~English @param String
 void Cuser::set_lname(std::string str)
 {
-        if(this -> contains_number(str) == 0)
-                this -> lname = str;
+        if (this->contains_number(str) == 0)
+                this->lname = str;
 }
 
-/**
- * @brief set_age Modifica el valor de age
- * @param u_age Unsigned int
-*/
+/// \~Spanish  @brief Cambiar edad \~English @brief Changing age value
+/// \~Spanish @param Entero sin signo \~English @param unsigned int
 void Cuser::set_age(unsigned int a)
 {
-        if(a<150)              
-                this -> age = a;        
-	
+        if (a < 150)
+                this->age = a;
 }
 
-/**
- * @brief set_sex Modifica el valor de sex
- * @param u_sex Char
-*/
+/// \~Spanish  @brief Cambiar sexo \~English @brief Changing sex value
+/// \~Spanish @param Cadena \~English @param String
 void Cuser::set_sex(char s)
 {
-        if((s == 'M') || (s == 'F') || (s == 'O'))
-        this -> sex = s;
+        if ((s == 'M') || (s == 'F') || (s == 'O'))
+                this->sex = s;
 }
 
-/**
- * @brief set_id Modifica el valor de id
- * @param u_id Long unsigned int
-*/      
+/// \~Spanish  @brief Cambiar id \~English @brief Changing id value
+/// \~Spanish @param Entero sin signo largo \~English @param long unsigned int
 void Cuser::set_id(long unsigned int i)
 {
-        if(i> 0)
-                this -> id = i;
+        if (i > 0)
+                this->id = i;
 }
 
-/**
- * @brief set_password Modifica el valor de password
- * @param u_password Cadena de caracteres
-*/
+/// \~Spanish  @brief Cambiar clave \~English @brief Changing password value
+/// \~Spanish @param Cadena \~English @param String
 void Cuser::set_password(std::string x)
 {
 
-if(x.size() >= 8)
-{
-if(x.find_first_of(" ")!= std::string::npos)
-{
-throw std::invalid_argument("the password can not have space");
-}
-else if ( x.find_first_of("0123456789") != std::string::npos)
-{
-        if(x.find_first_of("ABCDEFGHIJKLMNOPQRSTUVWXYZ") != std::string::npos)
+        if (x.size() >= 8)
         {
-                if(x.find_first_of("!#$%&'()+,,-./:;<=>?@]\[_^`{|}~")!= std::string::npos)
+                if (x.find_first_of(" ") != std::string::npos)
                 {
-                        this -> password = x;
+                        throw std::invalid_argument("the password can not have space");
+                }
+                else if (x.find_first_of("0123456789") != std::string::npos)
+                {
+                        if (x.find_first_of("ABCDEFGHIJKLMNOPQRSTUVWXYZ") != std::string::npos)
+                        {
+                                if (x.find_first_of("!#$%&'()+,,-./:;<=>?@]\[_^`{|}~") != std::string::npos)
+                                {
+                                        this->password = x;
+                                }
+                                else
+                                {
+                                        throw std::invalid_argument("The password need at least one special character");
+                                }
+                        }
+                        else
+                        {
+                                throw std::invalid_argument("The password need at least one capital letter");
+                        }
                 }
                 else
                 {
-                    throw std::invalid_argument("The password need at least one special character");
+                        throw std::invalid_argument("The password need at least one number");
                 }
         }
         else
         {
-        throw std::invalid_argument("The password need at least one capital letter");
+                throw std::domain_error("the password must be over 8 character");
         }
 }
-else
-{
-throw std::invalid_argument("The password need at least one number");
-}
-}
-else
-{
-throw std::domain_error("the password must be over 8 character");
-}
 
-}
-
-/**
- * @brief contains_number Verifica si la cadena tiene numeros
-*/
+/// \~Spanish  @brief Cadenas con numeros\~English @brief contains numbers
+/// \~Spanish @param Cadena \~English @param String
 bool Cuser::contains_number(const std::string &c)
 {
         return (c.find_first_of("0123456789") != std::string::npos);
 }
 
-/**
- * @brief sobrecarga del operador = 
- * @param objeto Cuser
- * @return objeto Cuser
-*/
-Cuser& Cuser::operator=(const Cuser aux_Cuser)
-{
-    this-> id = aux_Cuser.get_id();
-    this-> name = aux_Cuser.get_name();
-    this-> lname = aux_Cuser.get_lname();
-    this-> age = aux_Cuser.get_age();
-    this-> sex = aux_Cuser.get_sex();
-    this -> password = aux_Cuser.get_password();
+/// \~Spanish @name Sobrecarga de operadores
+///\~English @name Operator's overload
 
-    return (*this);
+/// \~Spanish @brief Sobrecarga del operador = \~English @brief Operator overload =
+/// \~Spanish @param Objeto Cuser \~English @param Cuser object
+/// \~Spanish @return Referencia a un objeto Cuser \~English @return Cuser reference
+Cuser &Cuser::operator=(const Cuser aux_Cuser)
+{
+        this->id = aux_Cuser.get_id();
+        this->name = aux_Cuser.get_name();
+        this->lname = aux_Cuser.get_lname();
+        this->age = aux_Cuser.get_age();
+        this->sex = aux_Cuser.get_sex();
+        this->password = aux_Cuser.get_password();
+
+        return (*this);
 }
-/**
- * @brief sobrecarga del operador == 
- * @param objeto Cuser
- * @return TRUE or False
-*/
+
+/// \~Spanish @brief Sobrecarga del operador == \~English @brief Operator overload ==
+/// \~Spanish @param Objeto Cuser \~English @param Cuser object
+/// \~Spanish @return TRUE or FALSE \~English @return TRUE or FALSE
+
 bool Cuser::operator==(const Cuser aux_Cuser)
 {
-    Cuser aux = *this;
-    return(aux.get_name() == aux_Cuser.get_name())
-           and (aux.get_lname() == aux_Cuser.get_lname()) 
-           and (aux.get_age() == aux_Cuser.get_age()) 
-           and (aux.get_sex() == aux_Cuser.get_sex())
-           and (aux.get_password() == aux_Cuser.get_password());
+        Cuser aux = *this;
+        return (aux.get_name() == aux_Cuser.get_name()) and (aux.get_lname() == aux_Cuser.get_lname()) and (aux.get_age() == aux_Cuser.get_age()) and (aux.get_sex() == aux_Cuser.get_sex()) and (aux.get_password() == aux_Cuser.get_password());
 }

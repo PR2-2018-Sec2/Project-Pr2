@@ -1,160 +1,106 @@
- /**
- *  @file user.cpp
- *  @name user.h 
- *  @author Raul Rojas 
- *  @author Diego Benitez 
- *  @author Luis Hernandez 
- *  @author Gabriel Guerrero   
- *  @author Alberto Calderon.
- *  @date 5/3/2018
- *  @brief Prototipos para el TDA Cuser
- *  @note
- * 		-El pasword solo sera aceptado si contiene al menos una letra mayuscula, un numero y caracter especial sin espacios
+/**
+ * @file user.h
+ * \~English @name Cuser object
+ * \~Spanish @name Objeto Cuser
+ * \~English @class Cuser
+ * \~Spanish @class Cuser
+ * \~Spanish @brief Implementación de objeto usuario
+ * \~English @brief User object implementation
+
+ * \~English @details This class user have all atributes related to a user
+ * @date 10/04/2018
+ * @author Raul Rojas
+ * @email 
+ * @author Diego Benitez
+ * @email 
+ * @author Luis Hernandez
+ * @email 
+ * @author Gabriel Guerrero
+ * @email 
+ * @author Alberto Calderon
+ * @email 
+ * \~Spanish @details La siguiente clase posee los atributos basicos de un usuario
+ * @date 10/04/2018
+ * @author Raul Rojas
+ * @email 
+ * @author Diego Benitez
+ * @email 
+ * @author Luis Hernandez
+ * @email 
+ * @author Gabriel Guerrero
+ * @email 
+ * @author Alberto Calderon
+ * @email 
+ *
+ * \~Spanish @nota
+ * Los atributos que posee son: 
+ *
+ *   - Id codigo de identificacion
+ *   - Nombre
+ *   - Apellido
+ *   - Edad
+ *   - Sexo
+ * 
+ * \~English @note     
+ * The atributes are
+ *    
+ *   - Id identification code
+ *   - Name
+ *   - Last name
+ *   - Age
+ *   - Sex
 */
+
 #ifndef PRUEBA_H
 #define PRUEBA_H
 #include<iostream>
-#include<stdexcept>
+
 class Cuser
 {
 	private:
 
-	long unsigned int id;
-	std::string name;
-	std::string lname;
-	unsigned int age;
-	char sex;
-    std::string password;
-	
+		long unsigned int id;
+		std::string name;
+		std::string lname;
+		unsigned int age;
+		char sex;
+		std::string password;
 	public:
-        
-    /**
-     * Constructores
-    */
+		/// \~English Constructor \~Spanish Constructor
+		Cuser();
+		/// \~English  Copied Constructor \~Spanish Constructor por copia
 
-	 /**
-     *@brief Constructor por defecto
-     */
-	Cuser();
+		Cuser(const Cuser &p);
+		/// \~English Parametric Constructor \~Spanish Constructor parametrico
+		Cuser(long unsigned int ,std::string ,std::string , unsigned int, char, std::string); 
 
-	/**
-     *@brief Constructor por copia
-     */
-	Cuser(const Cuser &p);
-	
-	/**
-     *@brief Constructor parametrizado
-     */
-	Cuser(long unsigned int ,std::string ,std::string , unsigned int, char, std::string);	
-	/**
-    
-	 *@brief Destructor
-     */
-	~Cuser();
+		/// \~English @brief Destructor \~Spanish @brief Destructor
+		~Cuser();
 
-	/**
-     * Getters 
-    */
+		// \~English Getters \~Spanish Observadores
+		long unsigned int get_id()const;
+		unsigned int get_age()const;
+		char get_sex()const;
+		std::string get_name()const;
+		std::string get_lname()const;
+		std::string get_password()const;
 
-   	/**
-		* @brief Obtener la id actual.
-		* @return Un objeto Cuser, con la id actual.
-	*/
-	long unsigned int get_id()const;
+		// \~English Setters \~Spanish Actuadores
+		void set_id(long unsigned int);
+		void set_age(unsigned int);
+		void set_sex(char);
+		void set_name(std::string);
+		void set_lname(std::string);
+		void set_password(std::string);
 
-	/**
-	 * @brief Obtener el name actual.
-	 * @return Un objeto Cuser, con el name actual.
-	*/
-	std::string get_name()const;
-
-	/**
-	 * @brief Obtener el lname actual.
-	 * @return Un objeto Cuser, con el lname actual.
-	*/
-	std::string get_lname()const;
-
-	/**
-	 * @brief Obtener la age actual.
-	 * @return Un objeto Cuser, con la age actual.
-	*/
-	unsigned int get_age()const;
-
-	/**
-	 * @brief Obtener el sex actual.
-	 * @return Un objeto Cuser, con el sex actual.
-	*/
-	char get_sex()const;
-
-	/**
-	 * @brief Obtener la password actual.
-	 * @return Un objeto Cuser, con la password actual.
-	*/
-    std::string get_password()const;
-
-	/**
-	 * Setters
-    */
-
-	/**
-	 * @brief set_id Modifica el valor de id
-	 * @param u_id Long unsigned int
-	*/
-	void set_id(long unsigned int );
-
-	/**
-	 * @brief set_name Modifica el valor de name
-	 * @param u_name Cadena de caracteres
-	*/
-	void set_name(std::string );
-
-	/**
-	 * @brief set_lname Modifica el valor de lname
-	 * @param u_lname Cadena de caracteres
-	*/
-	void set_lname(std::string );
-
-	/**
-	 * @brief set_age Modifica el valor de age
-	 * @param u_age Unsigned int
-	*/	///Verifica si la cadena tiene numeros
-	void set_age(unsigned int );
-
-	/**
-	 * @brief set_sex Modifica el valor de sex
-	 * @param u_sex Char
-	*/
-	void set_sex(char );
-
-	/**
-	 * @brief set_password Modifica el valor de password
-	 * @param u_password Cadena de caracteres
-	*/
-    void set_password(std::string);
-
-	/**
-	 * @brief contains_number Verifica si la cadena tiene numeros
-	*/
-	bool contains_number(const std::string &);
-
-	/**
-	 * @brief Sobrecarga del operador = 
-	 * @param Objeto Cuser
-	 * @return Referencia a un objeto Cuser
-    */
-    Cuser& operator=(const Cuser);
-
-    /**
-	 * @brief Sobrecarga del operador == 
-	 * @param Objeto Cuser
-	 * @return TRUE or FALSE
-    */
-    bool operator==(const Cuser);
-
+		// \~Spanish Operadores sobrecargados \~English Overloaded operators
+		Cuser& operator=(const Cuser);
+		bool operator==(const Cuser);
+		
+		// \~Spanish Verifica si la cadena contiene numeros \~English Check if string has numbers
+		bool contains_number(const std::string &);
 };
 
-/**
- * @brief contains_number Verifica si la cadena tiene numeros
-*/
-bool contains_number(const std::string &);
+// \~Spanish Verifica si la cadena contiene numeros \~English Check if string has numbers
+		bool contains_number(const std::string &);
 #endif 

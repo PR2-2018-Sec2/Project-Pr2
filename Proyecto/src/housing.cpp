@@ -1,59 +1,48 @@
+
 /**
- *  @name: Group Housing
-
- *  @members: Adolfo, Alejandro, Jorge, Cherry, Maria Fernanda
-	
- *  @brief: Creation of class type housing
-
- *  @file: Housing.cpp
- * 
- * */
+ * @file housing.cpp
+ * @date 10/04/2018
+ * @author Mafer Guerrero
+ * @email mariafernandaguerrero.25@gmail.com
+ * @author Adolfo Ramirez
+ * @author Cherry Gota
+ * @author Jose Rivera
+ * @author Jorge Carrero
+ * \~Spanish @brief Definiciones para el TDA CHousing  \~English @brief CHousing definitions
+*/
 
 #include <housing.h>
 
-int id = 1;
+/// \~Spanish @name Constructores 
+/// \~English @name Constructor
 
-//Class constructors
+/// \~English @brief Default Constructor \~Spanish @brief Constructor por defecto
 
-    //Default
+CHousing::CHousing(){
 
-Housing::Housing(){
-
-    this->num_Housing = id++;     //autoincrement Id
-    this->type_Housing = "House";
+    this->type_housing = "House";
     this->size = 100;
-    this->num_bedrooms = 3;
-    this->num_bathrooms = 2;
-    this->max_num_people = 10;
-    this->num_parking = 2;
     this->state = "Undefined";
     this->valuation = 1.00;
     this->address = "Undefined";
     this->city = "Undefined";
 }
+/// \~English Parametric Constructor \~Spanish Constructor parametrico
+/// \~English @comment Set values of type, size,state, valuaton, addres and city \~Spanish @comment Cambia las variables de tipo, tamaño, estado, valoracion, direccion y ciudad
+/// \~English @param type string \~Spanish @param Tipo cadena 
+/// \~English @param size float \~Spanish @param Tamaño flotante
+/// \~English @param state string \~Spanish @param Estado cadena
+/// \~English @param valuation float \~Spanish @param Valoracion flotante
+/// \~English @param address string \~Spanish @param Direccion cadena
+/// \~English @param city string \~Spanish @param Ciuedad cadena
 
-    //By parameters
-
-Housing::Housing(const std::string b,const float c, const unsigned int d, const unsigned int e, const unsigned int f, const unsigned int g, const std::string h , const float i, const std::string j, const std::string k){
+CHousing::CHousing(const std::string b, const float c, const std::string h , const float i, const std::string j, const std::string k){
     
-    this->num_Housing = id++;
 
-    this->type_Housing = b;
+    this->type_housing = b;
     
-    if(c<1000 or c>0) 
+    if(c<9000 or c>0) 
         this->size = c;
-
-    if(d>0 or d<30)
-        this->num_bedrooms = d;
-
-    if(e>0 or d<20)
-        this->num_bathrooms = e;
-
-    if(f>0 or f<100)
-        this->max_num_people = f;
-
-    if(g>0 or g<30)
-        this->num_parking = g;
 
     this->state = h;
    
@@ -65,17 +54,13 @@ Housing::Housing(const std::string b,const float c, const unsigned int d, const 
     this->city = k;
     
 }
+/// \~English @brief Copied Constructor \~Spanish @brief  Constructor por copia
+/// \~English @comment Set values of type, size,state, valuaton, addres and city from a copy of the object CHousing.\~Spanish @brief Inicializa los valores de tipo,tamaño,estado, valoracion, direccion y ciudad de una copia del objecto CHousing
+/// \~English @&p objet CHousing (copy) \~Spanish @&p objeto CHousing (copia)
 
-    //By reference
-
-Housing::Housing(const Housing& p){
-    this->num_Housing = p.num_Housing;
-    this->type_Housing = p.type_Housing;
+CHousing::CHousing(const CHousing& p){
+    this->type_housing = p.type_housing;
     this->size = p.size;
-    this->num_bedrooms = p.num_bedrooms;
-    this->num_bathrooms = p.num_bathrooms;
-    this->max_num_people = p.max_num_people;
-    this->num_parking = p.num_parking;
     this->state = p.state;
     this->valuation = p.valuation;
     this->address = p.address;
@@ -83,87 +68,112 @@ Housing::Housing(const Housing& p){
 
 }
 
-//Class destructor
+/// \~Spanish @name Observadores 
+///\~English @name Getters
+
+/// \~English @brief get type  \~Spanish @brief Ver tipo 
+/// \~English @return Current type  \~Spanish @return Tipo actual
 
 
-//Observers
-
-unsigned int Housing::get_num_Housing() const{
-    return this->num_Housing;
+std::string CHousing::get_type_housing() const{
+    return this->type_housing;
 }
 
-std::string Housing::get_type_Housing() const{
-    return this->type_Housing;
-}
+/// \~English @brief get size  \~Spanish @brief Ver tamaño 
+/// \~English @return Current size  \~Spanish @return Tamaño actual
 
-float Housing::get_size() const{
+float CHousing::get_size() const{
     return this->size;
 }
-unsigned int Housing::get_num_bedrooms() const{
-    return this->num_bedrooms;
-}
-unsigned int Housing::get_num_bathrooms() const{
-    return this->num_bathrooms;
-}
-unsigned int Housing::get_max_num_people() const{
-    return this->max_num_people;
-}
-unsigned int Housing::get_num_parking() const{
-    return this->num_parking; 
-}
-std::string Housing::get_state() const{
+
+/// \~English @brief get state  \~Spanish @brief Ver estado 
+/// \~English @return Current state  \~Spanish @return Estado actual
+
+std::string CHousing::get_state() const{
     return this->state;
 }
-float Housing::get_valuation() const{
+/// \~English @brief get valuation  \~Spanish @brief Ver valoracion 
+/// \~English @return Current valuation  \~Spanish @return Valoracion actual
+
+float CHousing::get_valuation() const{
     return this->valuation;
 }
-std::string Housing::get_address() const{
+/// \~English @brief get address  \~Spanish @brief Ver direccion 
+/// \~English @return Current address  \~Spanish @return Direccion actual
+
+std::string CHousing::get_address() const{
     return this->address;
 }
-std::string Housing::get_city() const{
+
+/// \~English @brief get city  \~Spanish @brief Ver ciudad 
+/// \~English @return Current city  \~Spanish @return Ciudad actual
+std::string CHousing::get_city() const{
     return this->city;
 }
 
-//Modifiers
 
-void Housing::set_num_Housing(const int n){     //Optional modifier made for special use cases, sets the Id of the housing unit
-    if(n>0)
-        this->num_Housing = n;
+/// \~Spanish @name Actuadores 
+///\~English @name Setters
 
+/// \~English @brief Changing type value \~Spanish @brief Cambiar tipo
+/// \~English @param String \~Spanish @param Cadena
+
+void CHousing::set_type_housing(const std::string n){
+     this->type_housing = n;
 }
-void Housing::set_type_Housing(const std::string n){
-     this->type_Housing = n;
-}
-void Housing::set_size(const float n){
+/// \~English @brief Changing size value \~Spanish @brief Cambiar tamaño
+/// \~English @param float \~Spanish @param flotante
+
+void CHousing::set_size(const float n){
     if(n<1000 or n>0)
         this->size = n;
 }
-void Housing::set_num_bedrooms(const unsigned int n){
-    if(n>0 or n<30)
-        this->num_bedrooms = n;
-}
-void Housing::set_num_bathrooms(const unsigned int n){
-    if(n>0 or n<20)
-        this->num_bathrooms = n;
-}
-void Housing::set_max_num_people(const unsigned int n){
-    if(n>0 or n<100)
-        this->max_num_people = n;
-}
-void Housing::set_num_parking(const unsigned int n){
-    if(n>0 or n<30)
-        this->num_parking = n;
-}
-void Housing::set_state(const std::string n){
+/// \~English @brief Changing state value \~Spanish @brief Cambiar estado
+/// \~English @param String \~Spanish @param Cadena
+
+void CHousing::set_state(const std::string n){
     this->state = n;
 }
-void Housing::set_valuation(const unsigned int n){
+/// \~English @brief Changing valuation value \~Spanish @brief Cambiar valoracion
+/// \~English @param float \~Spanish @param floatante
+void CHousing::set_valuation(const float n){
     if(n>0)
         this->valuation = n;
 } 
-void Housing::set_address(const std::string n){
+/// \~English @brief Changing address value \~Spanish @brief Cambiar direccion
+/// \~English @param String \~Spanish @param Cadena
+void CHousing::set_address(const std::string n){
      this->address = n;
 }
-void Housing::set_city(const std::string n){
+/// \~English @brief Changing city value \~Spanish @brief Cambiar ciudad
+/// \~English @param String \~Spanish @param Cadena
+void CHousing::set_city(const std::string n){
      this->city = n;
+}
+
+/// \~Spanish @name Sobrecarga de operadores  
+///\~English @name Operator's overload
+
+/// \~Spanish @brief Sobrecarga del operador = \~English @brief Operator overload =
+/// \~Spanish @param Objeto CHousing \~English @param CHousing object
+/// \~Spanish @return Referencia a un objeto CHousing \~English @return CHousing reference
+CHousing CHousing::operator=(const CHousing& p){
+    this->type_housing = p.type_housing;
+    this->size = p.size;
+    this->state = p.state;
+    this->valuation = p.valuation;
+    this->address = p.address;
+    this->city = p.city;
+    return (*this);
+}
+/// \~Spanish @brief Sobrecarga del operador == \~English @brief Operator overload ==
+/// \~Spanish @param Objeto CHousing \~English @param CHousing object
+/// \~Spanish @return TRUE or FALSE \~English @return TRUE or FALSE
+bool CHousing::operator==(const CHousing& p){;
+    return((this->type_housing == p.get_type_housing()) 
+           and (this->size == p.get_size()) 
+           and (this->state == p.get_state()) 
+           and (this->valuation == p.get_valuation())
+           and (this->address == p.get_address())
+           and(this->city == p.get_address()) ) ;
 }

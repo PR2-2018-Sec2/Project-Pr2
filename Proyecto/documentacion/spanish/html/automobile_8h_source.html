@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Sistema de Impuestos: Fichero Fuente include/automobile.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sistema de Impuestos
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">automobile.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="automobile_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#ifndef AUTOMOBIlE_H</span></div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#define AUTOMOBIlE_H</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span></div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_cautomobile.html">   59</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cautomobile.html">Cautomobile</a>{</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        std::string brand;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">double</span> price;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        std::string model;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> year;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        std::string lin_plate;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    </div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="class_cautomobile.html#abd847a15c21f065b4b6fa00fec9a553a">Cautomobile</a>();</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="class_cautomobile.html#abd847a15c21f065b4b6fa00fec9a553a">Cautomobile</a>(<span class="keyword">const</span> <a class="code" href="class_cautomobile.html">Cautomobile</a>&amp;);</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="class_cautomobile.html#abd847a15c21f065b4b6fa00fec9a553a">Cautomobile</a>(std::string,<span class="keywordtype">double</span>,std::string,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>, std::string);</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div><div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_cautomobile.html#aa3a2ca53356fd2f599afb1dffbdd1473">   80</a></span>&#160;        <a class="code" href="class_cautomobile.html#aa3a2ca53356fd2f599afb1dffbdd1473">~Cautomobile</a>(){};</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="comment">// \~English Getters \~Spanish Observadores</span></div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        std::string <a class="code" href="class_cautomobile.html#a2194e32fb5aeaf71dea2a346db3d75e0">get_brand</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_cautomobile.html#aa1271b8e3583809af8a00f0989d3ef10">get_price</a>() <span class="keyword">const</span>;  </div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        std::string <a class="code" href="class_cautomobile.html#a5ab4c602bf31488b19e7a2d5240a96ef">get_model</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_cautomobile.html#adba2be0026ebbeeb1c695f4994b962f3">get_year</a>() <span class="keyword">const</span>;    </div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        std::string <a class="code" href="class_cautomobile.html#a33087bf4433b9ffc1b43edba6bb68f12">get_lin_plate</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="comment">// \~English Setters \~Spanish Actuadores</span></div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_cautomobile.html#a73eeb7e9d796dd543aed60259d86dc59">set_brand</a>(<span class="keyword">const</span> std::string);</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_cautomobile.html#a9cfc42dba3baa97c66e802a17fc935cf">set_price</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>);</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_cautomobile.html#aff7124d509cd01e8746ec93cdc9d6184">set_model</a>(<span class="keyword">const</span> std::string);      </div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_cautomobile.html#a2c1a1e039f2f305d839782266aba7ca5">set_year</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>);    </div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_cautomobile.html#a2b1216bf9add916b0159aefba3d748f8">set_lin_plate</a>(<span class="keyword">const</span> std::string);</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        </div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="class_cautomobile.html">Cautomobile</a>&amp; <a class="code" href="class_cautomobile.html#af0c8b265ae26b2c051d1ff95097fe1f1">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_cautomobile.html">Cautomobile</a>);</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_cautomobile.html#a999ac50ad714d2b67601c4c231657af8">operator==</a>(<span class="keyword">const</span> <a class="code" href="class_cautomobile.html">Cautomobile</a>);</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    </div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;};</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_cautomobile_html_af0c8b265ae26b2c051d1ff95097fe1f1"><div class="ttname"><a href="class_cautomobile.html#af0c8b265ae26b2c051d1ff95097fe1f1">Cautomobile::operator=</a></div><div class="ttdeci">Cautomobile &amp; operator=(const Cautomobile)</div><div class="ttdoc">Sobrecarga del operador =. </div><div class="ttdef"><b>Definition:</b> automobile.cpp:159</div></div>
+<div class="ttc" id="class_cautomobile_html"><div class="ttname"><a href="class_cautomobile.html">Cautomobile</a></div><div class="ttdoc">Implementación de objeto Automovil. </div><div class="ttdef"><b>Definition:</b> automobile.h:59</div></div>
+<div class="ttc" id="class_cautomobile_html_a2b1216bf9add916b0159aefba3d748f8"><div class="ttname"><a href="class_cautomobile.html#a2b1216bf9add916b0159aefba3d748f8">Cautomobile::set_lin_plate</a></div><div class="ttdeci">void set_lin_plate(const std::string)</div><div class="ttdoc">Modifica el valor de placa. </div><div class="ttdef"><b>Definition:</b> automobile.cpp:146</div></div>
+<div class="ttc" id="class_cautomobile_html_a2c1a1e039f2f305d839782266aba7ca5"><div class="ttname"><a href="class_cautomobile.html#a2c1a1e039f2f305d839782266aba7ca5">Cautomobile::set_year</a></div><div class="ttdeci">void set_year(const unsigned int)</div><div class="ttdoc">Modifica el valor de año y mayor a 1850. </div><div class="ttdef"><b>Definition:</b> automobile.cpp:138</div></div>
+<div class="ttc" id="class_cautomobile_html_abd847a15c21f065b4b6fa00fec9a553a"><div class="ttname"><a href="class_cautomobile.html#abd847a15c21f065b4b6fa00fec9a553a">Cautomobile::Cautomobile</a></div><div class="ttdeci">Cautomobile()</div><div class="ttdoc">Constructores. </div><div class="ttdef"><b>Definition:</b> automobile.cpp:26</div></div>
+<div class="ttc" id="class_cautomobile_html_a73eeb7e9d796dd543aed60259d86dc59"><div class="ttname"><a href="class_cautomobile.html#a73eeb7e9d796dd543aed60259d86dc59">Cautomobile::set_brand</a></div><div class="ttdeci">void set_brand(const std::string)</div><div class="ttdoc">Cambiar modelo. </div><div class="ttdef"><b>Definition:</b> automobile.cpp:113</div></div>
+<div class="ttc" id="class_cautomobile_html_a33087bf4433b9ffc1b43edba6bb68f12"><div class="ttname"><a href="class_cautomobile.html#a33087bf4433b9ffc1b43edba6bb68f12">Cautomobile::get_lin_plate</a></div><div class="ttdeci">std::string get_lin_plate() const </div><div class="ttdoc">Ver placa. </div><div class="ttdef"><b>Definition:</b> automobile.cpp:101</div></div>
+<div class="ttc" id="class_cautomobile_html_adba2be0026ebbeeb1c695f4994b962f3"><div class="ttname"><a href="class_cautomobile.html#adba2be0026ebbeeb1c695f4994b962f3">Cautomobile::get_year</a></div><div class="ttdeci">unsigned int get_year() const </div><div class="ttdoc">Ver año. </div><div class="ttdef"><b>Definition:</b> automobile.cpp:93</div></div>
+<div class="ttc" id="class_cautomobile_html_a2194e32fb5aeaf71dea2a346db3d75e0"><div class="ttname"><a href="class_cautomobile.html#a2194e32fb5aeaf71dea2a346db3d75e0">Cautomobile::get_brand</a></div><div class="ttdeci">std::string get_brand() const </div><div class="ttdoc">Ver marca. </div><div class="ttdef"><b>Definition:</b> automobile.cpp:69</div></div>
+<div class="ttc" id="class_cautomobile_html_aa3a2ca53356fd2f599afb1dffbdd1473"><div class="ttname"><a href="class_cautomobile.html#aa3a2ca53356fd2f599afb1dffbdd1473">Cautomobile::~Cautomobile</a></div><div class="ttdeci">~Cautomobile()</div><div class="ttdoc">Destructor. </div><div class="ttdef"><b>Definition:</b> automobile.h:80</div></div>
+<div class="ttc" id="class_cautomobile_html_a9cfc42dba3baa97c66e802a17fc935cf"><div class="ttname"><a href="class_cautomobile.html#a9cfc42dba3baa97c66e802a17fc935cf">Cautomobile::set_price</a></div><div class="ttdeci">void set_price(const double)</div><div class="ttdoc">Cambiar precio. </div><div class="ttdef"><b>Definition:</b> automobile.cpp:121</div></div>
+<div class="ttc" id="class_cautomobile_html_aa1271b8e3583809af8a00f0989d3ef10"><div class="ttname"><a href="class_cautomobile.html#aa1271b8e3583809af8a00f0989d3ef10">Cautomobile::get_price</a></div><div class="ttdeci">double get_price() const </div><div class="ttdoc">Ver precio. </div><div class="ttdef"><b>Definition:</b> automobile.cpp:77</div></div>
+<div class="ttc" id="class_cautomobile_html_a999ac50ad714d2b67601c4c231657af8"><div class="ttname"><a href="class_cautomobile.html#a999ac50ad714d2b67601c4c231657af8">Cautomobile::operator==</a></div><div class="ttdeci">bool operator==(const Cautomobile)</div><div class="ttdoc">Sobrecarga del operador ==. </div><div class="ttdef"><b>Definition:</b> automobile.cpp:173</div></div>
+<div class="ttc" id="class_cautomobile_html_aff7124d509cd01e8746ec93cdc9d6184"><div class="ttname"><a href="class_cautomobile.html#aff7124d509cd01e8746ec93cdc9d6184">Cautomobile::set_model</a></div><div class="ttdeci">void set_model(const std::string)</div><div class="ttdoc">Modifica el valor de modelo. </div><div class="ttdef"><b>Definition:</b> automobile.cpp:130</div></div>
+<div class="ttc" id="class_cautomobile_html_a5ab4c602bf31488b19e7a2d5240a96ef"><div class="ttname"><a href="class_cautomobile.html#a5ab4c602bf31488b19e7a2d5240a96ef">Cautomobile::get_model</a></div><div class="ttdeci">std::string get_model() const </div><div class="ttdoc">Ver modelo. </div><div class="ttdef"><b>Definition:</b> automobile.cpp:85</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

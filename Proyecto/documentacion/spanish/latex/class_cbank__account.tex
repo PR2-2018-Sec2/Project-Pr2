@@ -1,0 +1,175 @@
+\hypertarget{class_cbank__account}{}\section{Referencia de la Clase Cbank\+\_\+account}
+\label{class_cbank__account}\index{Cbank\+\_\+account@{Cbank\+\_\+account}}
+
+
+Implementación de objeto banco.  
+
+
+
+
+{\ttfamily \#include $<$bank.\+h$>$}
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cbank__account_a6a445565be4138841cd9ae19a284c6a3}{$\sim$\+Cbank\+\_\+account} ()\hypertarget{class_cbank__account_a6a445565be4138841cd9ae19a284c6a3}{}\label{class_cbank__account_a6a445565be4138841cd9ae19a284c6a3}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}{\bf Constructores}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cbank__account_ab33d4d440a059df6781a6007e02ecf60}{Cbank\+\_\+account} ()
+\begin{DoxyCompactList}\small\item\em Constructores. \end{DoxyCompactList}\item 
+\hyperlink{class_cbank__account_adf010826ed71b599d7b9292e1c7ff971}{Cbank\+\_\+account} (double, std\+::string)
+\begin{DoxyCompactList}\small\item\em Constructor parametrico. \end{DoxyCompactList}\item 
+\hyperlink{class_cbank__account_ae249ba9bfa4100cdc8deff17133e2914}{Cbank\+\_\+account} (const \hyperlink{class_cbank__account}{Cbank\+\_\+account} \&)
+\begin{DoxyCompactList}\small\item\em Constructor parametrico. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Observadores}\par
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_cbank__account_a3a04a3ddbbe032c369aa3cf483720f5c}{get\+\_\+balance} () const 
+\begin{DoxyCompactList}\small\item\em Ver Balance. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_cbank__account_a666b0e292527ad2886f34a93789ab80d}{get\+\_\+account\+\_\+number} () const 
+\begin{DoxyCompactList}\small\item\em Ver Balance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Actuadores}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_cbank__account_ab47bf4fce0d38963c39ce893553b951f}{set\+\_\+balance} (const double)
+\begin{DoxyCompactList}\small\item\em Cambiar balance. \end{DoxyCompactList}\item 
+void \hyperlink{class_cbank__account_a920a324760772b2018fe4a4812a8eeca}{set\+\_\+account\+\_\+number} (const std\+::string)
+\begin{DoxyCompactList}\small\item\em Cambiar cuenta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Descripción detallada}
+Implementación de objeto banco. 
+
+La siguiente clase posee los atributos basicos de una cuenta bancaria \begin{DoxyDate}{Fecha}
+10/04/2018 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Autor}
+Leyra Albornoz
+\end{DoxyAuthor}
+Los atributos que posee son\+:
+
+
+\begin{DoxyItemize}
+\item Balance
+\item Numero de cuenta 
+\end{DoxyItemize}
+
+\subsection{Documentación del constructor y destructor}
+\index{Cbank\+\_\+account@{Cbank\+\_\+account}!Cbank\+\_\+account@{Cbank\+\_\+account}}
+\index{Cbank\+\_\+account@{Cbank\+\_\+account}!Cbank\+\_\+account@{Cbank\+\_\+account}}
+\subsubsection[{\texorpdfstring{Cbank\+\_\+account()}{Cbank_account()}}]{\setlength{\rightskip}{0pt plus 5cm}Cbank\+\_\+account\+::\+Cbank\+\_\+account (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cbank__account_ab33d4d440a059df6781a6007e02ecf60}{}\label{class_cbank__account_ab33d4d440a059df6781a6007e02ecf60}
+
+
+Constructores. 
+
+Constructor por defecto. \index{Cbank\+\_\+account@{Cbank\+\_\+account}!Cbank\+\_\+account@{Cbank\+\_\+account}}
+\index{Cbank\+\_\+account@{Cbank\+\_\+account}!Cbank\+\_\+account@{Cbank\+\_\+account}}
+\subsubsection[{\texorpdfstring{Cbank\+\_\+account(double, std\+::string)}{Cbank_account(double, std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}Cbank\+\_\+account\+::\+Cbank\+\_\+account (
+\begin{DoxyParamCaption}
+\item[{double}]{bal, }
+\item[{std\+::string}]{acc}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cbank__account_adf010826ed71b599d7b9292e1c7ff971}{}\label{class_cbank__account_adf010826ed71b599d7b9292e1c7ff971}
+
+
+Constructor parametrico. 
+
+Constructor parametrico  Cambia las variables de balace y numero de cuenta.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em doble} & \\
+\hline
+{\em Doble} & precision \\
+\hline
+\end{DoxyParams}
+\index{Cbank\+\_\+account@{Cbank\+\_\+account}!Cbank\+\_\+account@{Cbank\+\_\+account}}
+\index{Cbank\+\_\+account@{Cbank\+\_\+account}!Cbank\+\_\+account@{Cbank\+\_\+account}}
+\subsubsection[{\texorpdfstring{Cbank\+\_\+account(const Cbank\+\_\+account \&)}{Cbank_account(const Cbank_account &)}}]{\setlength{\rightskip}{0pt plus 5cm}Cbank\+\_\+account\+::\+Cbank\+\_\+account (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cbank\+\_\+account} \&}]{cuen}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cbank__account_ae249ba9bfa4100cdc8deff17133e2914}{}\label{class_cbank__account_ae249ba9bfa4100cdc8deff17133e2914}
+
+
+Constructor parametrico. 
+
+Constructor por copia  Cambia las variables de balace y numero de cuenta \&p objeto Cbank\+\_\+accoun (copia) 
+
+\subsection{Documentación de las funciones miembro}
+\index{Cbank\+\_\+account@{Cbank\+\_\+account}!get\+\_\+account\+\_\+number@{get\+\_\+account\+\_\+number}}
+\index{get\+\_\+account\+\_\+number@{get\+\_\+account\+\_\+number}!Cbank\+\_\+account@{Cbank\+\_\+account}}
+\subsubsection[{\texorpdfstring{get\+\_\+account\+\_\+number() const }{get_account_number() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Cbank\+\_\+account\+::get\+\_\+account\+\_\+number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_cbank__account_a666b0e292527ad2886f34a93789ab80d}{}\label{class_cbank__account_a666b0e292527ad2886f34a93789ab80d}
+
+
+Ver Balance. 
+
+\begin{DoxyReturn}{Devuelve}
+Balance actual 
+\end{DoxyReturn}
+\index{Cbank\+\_\+account@{Cbank\+\_\+account}!get\+\_\+balance@{get\+\_\+balance}}
+\index{get\+\_\+balance@{get\+\_\+balance}!Cbank\+\_\+account@{Cbank\+\_\+account}}
+\subsubsection[{\texorpdfstring{get\+\_\+balance() const }{get_balance() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Cbank\+\_\+account\+::get\+\_\+balance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_cbank__account_a3a04a3ddbbe032c369aa3cf483720f5c}{}\label{class_cbank__account_a3a04a3ddbbe032c369aa3cf483720f5c}
+
+
+Ver Balance. 
+
+\begin{DoxyReturn}{Devuelve}
+Balance actual 
+\end{DoxyReturn}
+\index{Cbank\+\_\+account@{Cbank\+\_\+account}!set\+\_\+account\+\_\+number@{set\+\_\+account\+\_\+number}}
+\index{set\+\_\+account\+\_\+number@{set\+\_\+account\+\_\+number}!Cbank\+\_\+account@{Cbank\+\_\+account}}
+\subsubsection[{\texorpdfstring{set\+\_\+account\+\_\+number(const std\+::string)}{set_account_number(const std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cbank\+\_\+account\+::set\+\_\+account\+\_\+number (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{acc}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cbank__account_a920a324760772b2018fe4a4812a8eeca}{}\label{class_cbank__account_a920a324760772b2018fe4a4812a8eeca}
+
+
+Cambiar cuenta. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Cadena} & \\
+\hline
+\end{DoxyParams}
+\index{Cbank\+\_\+account@{Cbank\+\_\+account}!set\+\_\+balance@{set\+\_\+balance}}
+\index{set\+\_\+balance@{set\+\_\+balance}!Cbank\+\_\+account@{Cbank\+\_\+account}}
+\subsubsection[{\texorpdfstring{set\+\_\+balance(const double)}{set_balance(const double)}}]{\setlength{\rightskip}{0pt plus 5cm}void Cbank\+\_\+account\+::set\+\_\+balance (
+\begin{DoxyParamCaption}
+\item[{const double}]{bal}
+\end{DoxyParamCaption}
+)}\hypertarget{class_cbank__account_ab47bf4fce0d38963c39ce893553b951f}{}\label{class_cbank__account_ab47bf4fce0d38963c39ce893553b951f}
+
+
+Cambiar balance. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Doble} & precision \\
+\hline
+\end{DoxyParams}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{bank_8h}{bank.\+h}\item 
+scr/\hyperlink{bank_8cpp}{bank.\+cpp}\end{DoxyCompactItemize}

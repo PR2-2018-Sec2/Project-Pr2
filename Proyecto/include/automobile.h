@@ -1,18 +1,54 @@
+
 /**
- * @file Cautomobile.h
+ * @file automobile.h
+
+ * \~English @name CAutomobile object
+ * \~Spanish @name Objeto CAutomovil
+ * \~English @class Cautomobile
+ * \~Spanish @class Cautomobile
+ * \~Spanish @brief Implementación de objeto Automovil
+ * \~English @brief Automobile object implementation
  * @date 10/04/2018
- * @authors Rafael Rivas, Samuel Aranda, Oriana Pedroza, Jeremy Roa, laura Rosales
+ * @author Rafael Rivas
  * @email ingrafaelrivascalderon@gmail.com
- * @brief Implementación de objeto Cautomobile
- * @note         
- *   - la lin_plate es una cadena de caracteres de tamaño 7 
- *   - price un numero de doble precisión
- *   - model una cadena de caracteres
- *   - year un entero sin signo
+ * @author Jeremy Roa
+ * @email jmra0611@gmail.com
+ * @author Oriana Pedroza
+ * @email ingrafaelrivascalderon@gmail.com
+ * @author Samuel Aranda
+ * @email ingrafaelrivascalderon@gmail.com
+ * @author Laura Rosales
+ * @email ingrafaelrivascalderon@gmail.com
+ * \~English @details This class automobile have all atributes related to a automobile
+ * \~Spanish @details La siguiente clase posee los atributos basicos de un automovil
+ * @date 10/04/2018
+ * @author Rafael Rivas
+ * @email ingrafaelrivascalderon@gmail.com
+ * @author Jeremy Roa
+ * @email jmra0611@gmail.com
+ * @author Oriana Pedroza
+ * @email ingrafaelrivascalderon@gmail.com
+ * @author Samuel Aranda
+ * @email ingrafaelrivascalderon@gmail.com
+ * @author Laura Rosales
+ * @email ingrafaelrivascalderon@gmail.com
+ * \~Spanish @nota
+ * Los atributos que posee son: 
+ *
+ *   - Placa
+ *   - Marca
+ *   - Precio
+ *   - Modelo
+ *   - Año
  * 
- * 
- * 
- *   -Si se introduce un dato errado a la hora de crear los constructores el programa se detendra, utlizando la función assert de la libreria con dicho nombre.
+ * \~English @note     
+ * The atributes are
+ *    
+ *   - Lin plate
+ *   - Brand
+ *   - Price
+ *   - Model
+ *   - Year
 */
 
 #ifndef AUTOMOBIlE_H
@@ -23,112 +59,45 @@
 class Cautomobile{
 
     private:
-      std::string brand;
-      double price;
-      std::string model;
-      unsigned int year;
-      std::string lin_plate;    
+
+        std::string brand;
+        double price;
+        std::string model;
+        unsigned int year;
+        std::string lin_plate;
+
     public:
+    
+        /// \~Spanish Constructores \~English Cosntructor
 
-    /**
-     * Constructores
-    */
+        Cautomobile();
+        /// \~English Copied Constructor \~Spanish Constructor por copia
+        Cautomobile(const Cautomobile&);
+        /// \~English Parametric Constructor \~Spanish Constructor parametrico
+        Cautomobile(std::string,double,std::string,unsigned int, std::string);
 
-    /**
-     *@brief Constructor por defecto
-     */
-    Cautomobile();
-    /**
-     *@brief Constructor por copia
-     */
-    Cautomobile(const Cautomobile&);
-    /**
-     *@brief Constructor parametrizado
-     */
-    Cautomobile(std::string,double,std::string,unsigned int, std::string);
-     /**
-     *@brief Destructor
-     */
-    ~Cautomobile(){};
+        /// \~Spanish @brief Destructor \~English @brief Destructor
+        ~Cautomobile(){};
 
-    /**
-     * Getters 
-    */
+        // \~English Getters \~Spanish Observadores
 
-    /**
-     *@brief set_brand
-     *@return brand actual
-     */
-    std::string get_brand() const;
-    /**
-     *@brief get_price
-     *@return price actual
-     */
-    double get_price() const;    
-    /**
-     *@brief get_model
-     *@return model actual
-     */
-    std::string get_model() const;
-    /**
-     *@brief get_year
-     *@return año actual
-     */
-    unsigned int get_year() const;    
-    /**
-     *@brief get_lin_plate
-     *@return lin_plate actual
-     */
-    std::string get_lin_plate() const;
+        std::string get_brand() const;
+        double get_price() const;  
+        std::string get_model() const;
+        unsigned int get_year() const;    
+        std::string get_lin_plate() const;
 
-    /**
-     * Setters
-    */
+        // \~English Setters \~Spanish Actuadores
 
-     /**
-     *@brief Modifica el valor de brand
-     *@param Cadena de caracteres
-     */
-    void set_brand(const std::string);
+        void set_brand(const std::string);
+        void set_price(const double);
+        void set_model(const std::string);      
+        void set_year(const unsigned int);    
+        void set_lin_plate(const std::string);
 
-     /**
-     *@brief Modifica el valor de price
-     *@param Número de doble precisión
-     */
-    void set_price(const double);
-
-     /**
-     *@brief Modifica el valor de model
-     *@param Cadena de caracteres
-     */
-    void set_model(const std::string);        
-
-     /**
-     *@brief Modifica el valor de year y mayor a 1850
-     *@param Número de entero sin signo
-     */
-    void set_year(const unsigned int);
-    /**
-     *@brief set_lin_plate Modifica el valor de lin_plate
-     *@param Cadena de caracteres
-     */
-    void set_lin_plate(const std::string);
-
-
-
-  
-     /**
-     *@brief Sobrecarga del operador = 
-     *@param Objeto Cautomobile
-     *@return Referencia a un objeto Cautomobile
-     */
-    Cautomobile& operator=(const Cautomobile);
-    /**
-     *@brief Sobrecarga del operador == 
-     *@param Objeto Cautomobile
-     *@return TRUE or FALSE
-     */
-    bool operator==(const Cautomobile);
+        
+        Cautomobile& operator=(const Cautomobile);
+        bool operator==(const Cautomobile);
     
 };
 

@@ -1,80 +1,98 @@
+
 /**
- *  @name: Group Housing
-
- *  @members: Adolfo, Alejandro, Jorge, Cherry, Maria Fernanda
-	
- *  @brief: Creation of class type housing
-
- *  @file: housing.h
+ * @file housing.h
+ 
+ * \~English @name CHousing object
+ * \~Spanish @name Objeto CHousing
+ * \~English @class CHousing
+ * \~Spanish @class CHousing
+ * \~Spanish @brief Implementación de objeto Vivienda
+ * \~English @brief Housing object implementation
+ * @author Mafer Guerrero
+ * @email mariafernandaguerrero.25@gmail.com
+ * @author Adolfo Ramirez
+ * @author Cherry Gota
+ * @author Jose Rivera
+ * @author Jorge Carrero
+ * \~English @details This class housing have all atributes related to a house
+ * \~Spanish @details La siguiente clase posee los atributos basicos de una casa
+ * @author Mafer Guerrero
+ * @email mariafernandaguerrero.25@gmail.com
+ * @author Adolfo Ramirez
+ * @author Cherry Gota
+ * @author Jose Rivera
+ * @author Jorge Carrero
+ *
+ * \~Spanish @nota
+ * Los atributos que posee son: 
+ *
+ *   - Tipo de vivienda (apartamento, casa, otro)
+ *   - Area de la vivienda en metros cuadrados
+ *   - Estado donde esta localizado
+ *   - Ciudad
+ *   - Direccion
+ *   - Valoracion
  * 
- * */
-
-#ifndef HOUSING_H
-#define HOUSING_H
-
-#include <iostream>
-#include <stdlib.h>
-
-/**  These variables need to be defined in the main program for proper functioning
-    int *NROS = NULL;
-    int n=0;
+ * \~English @note     
+ * The atributes are
+ *    
+ *   - Type of Chousing (apartment, house, other)
+ *   - Area of the Chousing unit in square meters
+ *   - State or province in which the unit is located
+ *   - City in which the unit is located
+ *   - Address of the unit
+ *   - Value of the unit in currency
 */
 
-class Housing{
+#ifndef CHOUSING_H
+#define CHOUSING_H
+
+#include<iostream>
+
+class CHousing{
 
     private:
 
-        unsigned int num_Housing;   //Id of the housing unit
-        std::string type_Housing;   //Type of housing (apartment, house, other)
-        float size;                 //Area of the housing unit in square meters
-        unsigned int num_bedrooms;  //Number of regular rooms
-        unsigned int num_bathrooms; //Number of bathrooms
-        unsigned int max_num_people;//Maximun number of people who can occupy the unit
-        unsigned int num_parking;   //Number of parking spaces
-        std::string state;          //State or province in which the unit is located
-        std::string city;           //City in which the unit is located
-        std::string address;        //Address of the unit
-        float valuation;            //Value of the unit in currency
+        std::string type_housing;/**<\~English Type of Chousing (apartment, house, other) \~Spanish Tipo de vivienda (apartamento, casa, otro)*/
+        float size;              /**<\~English Area of the Chousing unit in square meters \~Spanish Area de la vivienda en metros cuadrados*/
+        std::string state;       /**<\~English State or province in which the unit is located \~Spanish Estado donde esta localizado*/
+        std::string city;        /**<\~English City in which the unit is located \~Spanish Ciudad*/
+        std::string address;     /**<\~English Address of the unit \~Spanish Direccion*/
+        float valuation;         /**<\~English Valuation \~Spanish Valoracion*/
 
     public:
 
-        //Class constructors
+        
+        /// \~English Constructor \~Spanish Constructor
+        
+        CHousing();
+        /// \~English @brief Copied Constructor \~Spanish @brief  Constructor por copia
+        CHousing(const CHousing&);
+        /// \~English Parametric Constructor \~Spanish Constructor parametrico
+        CHousing(const std::string,const float,  const std::string, const float, const std::string, const std::string);
+        
+        /// \~English Destructor \~Spanish Destructor
+        ~CHousing(){};  
 
-        Housing();                  //Default
-        Housing(const Housing&);    //By reference
-        Housing(const std::string,const float, const unsigned int, const unsigned int, const unsigned int, const unsigned int, const std::string, const float, const std::string, const std::string); //By parameters ,const int,int,int*
-        
-        //Class destructor
-        
-        ~Housing(){};
-        
-        //Observers
-        
-        unsigned int get_num_Housing() const;
-        std::string get_type_Housing() const;
-        float get_size() const;
-        unsigned int get_num_bedrooms() const;
-        unsigned int get_num_bathrooms() const;
-        unsigned int get_max_num_people() const;
-        unsigned int get_num_parking() const;
-        std::string get_state() const;
-        float get_valuation() const;
-        std::string get_address() const;
-        std::string get_city() const;
+        //\~English Getters \~Spanish Observadores
 
-        //Modifiers
-        
-        void set_num_Housing(const int);//(number , n, *NROS)
-        void set_type_Housing(const std::string);
+        std::string get_type_housing() const;  
+        float get_size() const;  
+        std::string get_state() const;  
+        float get_valuation() const;  
+        std::string get_address() const;  
+        std::string get_city() const; 
+
+        //\~English Setters \~Spanish Actuadores
+        void set_type_housing(const std::string);
         void set_size(const float);
-        void set_num_bedrooms(const unsigned int);
-        void set_num_bathrooms(const unsigned int);
-        void set_max_num_people(const unsigned int);
-        void set_num_parking(const unsigned int);
         void set_state(const std::string);
-        void set_valuation(const unsigned int);
+        void set_valuation(const float);
         void set_address(const std::string);
-        void set_city(const std::string);  
+        void set_city(const std::string);
+
+        CHousing operator=(const CHousing&);
+		bool operator==(const CHousing&);
 };
 
 #endif
