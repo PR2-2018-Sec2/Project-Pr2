@@ -11,6 +11,12 @@
 */
 
 #include <tax_user.h>
+#include <fstream>
+#include <iomanip>
+#include <vector>
+#include <functional>
+#include <cstdlib>
+#include <sys/stat.h>
 
 	/// \~Spanish @name Constructores 
 	///\~English @name Constructor
@@ -29,7 +35,7 @@
 
 	/// \~Spanish @brief Ver impuesto  \~English @brief Get tax
 	/// \~Spanish @return impuesto actual  \~English @return Current tax
-	long int Ctax_user::get_tax() const
+	float Ctax_user::get_tax() const
 	{
 		return this->tax;
 	}
@@ -39,26 +45,79 @@
 
 	/// \~Spanish @brief Cambiar impuesto \~English @brief Changing tax value
 	/// \~Spanish @param cadena\~English @param string
-	void Ctax_user::set_tax(long int u_tax){
-		this-> tax = u_tax;
+	void Ctax_user::set_tax(float u_tax){
+		if(u_tax >= 0)
+		  this-> tax = u_tax;
+		else throw std::invalid_argument("Invalid Tax");
 	}
 
+    bool Ctax_user::decl_automobile(Cautomobile)
+    {
 
-/*
+    }
 
-	Ctax_user::Ctax_user(Cuser aux_user, Cautomobile aux_auto, Cbank_account aux_bank, Housing aux_house)
+    bool Ctax_user::decl_housing(CHousing)
+    {
+
+    }
+
+	
+    bool Ctax_user::add_account(Cbank_account acc)
+    {
+
+		verify_account(acc);
+
+		if ((acc.get_id() == this->get_id()) and (verify_account(acc) == true))
+		{
+			std::string id_file = "../database/" + this->get_id() + "/" + this->get_id() + "_b.txt";
+			std:: fstream arch(id_file,std::ios::in | std::ios::out | std::ios::app);
+
+			if(!arch.is_open()) return false;
+
+			arch<<std::left << std::setw(21)<<acc.get_account_number();
+			arch<<std::left << std::setw(21)<<acc.get_balance();	        
+	        arch<<std::left << std::setw(21)<<acc.get_account_type();
+	        arch<<std::left << std::setw(21)<<acc.get_id();
+	        arch<<std::left << std::setw(21)<<acc.get_email()<<"\n";
+
+			arch.close();
+
+			std::cout << "\nCuenta Bien registrada";
+
+			return true;
+		}
+
+		std::cout << "\nProblemas al registrar";
+
+		return false;
+    }
+
+	bool Ctax_user::verify_account(Cbank_account acc)
 	{
-		/*this -> set_id(aux_user.get_id());
-		this -> set_name(aux_user.get_name());
-		this -> set_lname(aux_user.get_lname());
-		this -> set_age(aux_user.get_age());
-		//this -> set_sex(aux_user.get_sex());
-		this -> a = aux_auto;
-		//this -> b.set_balance(aux_bank.get_balance());
-		//this -> b.set_account_number(aux_bank.get_account_number());
-		this -> c.set_address(aux_house.get_address());
-		this -> c.set_valuation(aux_house.get_valuation());
-		this -> c.set_type_Housing(aux_house.get_type_Housing());
-		this -> c.set_size(aux_house.get_size());
+		
+		std::string search,id_file = "../database/" + this->get_id() + "/" + this->get_id() + "_b.txt";
 
-	} */
+		std:: fstream arch;
+
+		arch.open(id_file,std::ios::in);
+				
+		if(arch.fail()) 
+		    return false;
+
+		arch.clear();
+		
+		while(!arch.eof())
+		{			
+			search.clear();
+			std::getline(arch,search,' ');
+			if(search == acc.get_account_number())
+			{
+				arch.close();
+				return false;
+			}
+			if(!arch.eof()) arch.seekg((21 * 4));
+		}
+
+		arch.close();
+		return true;
+	}

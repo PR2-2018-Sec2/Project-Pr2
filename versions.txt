@@ -1,0 +1,117 @@
+commit 732097472a87fc0f9915f21cd9dc715f05e4343b
+Merge: d7cce8a 7fa08a0
+Author: Jeremy Roa <jmra0611@gmail.com>
+Date:   Tue Apr 17 20:26:11 2018 -0400
+
+    Union del trabajo desarrollado del equipo Mafer con el equipo Luis. Revisar si se realizo bien la fusion
+
+commit 7fa08a01d77fc401b8541b92f8c935fffb38816e
+Author: MaferG <mariafernandaguerrero.25@gmail.com>
+Date:   Tue Apr 17 17:12:52 2018 -0400
+
+    Documentacion con operadores
+
+commit d7cce8a0b022c84f13524d686f5fcc5c7d9044e8
+Author: Danzarote <luishdaniel@gmail.com>
+Date:   Mon Apr 16 12:28:29 2018 -0400
+
+    Eliminados los archivos innecesarios
+
+commit 38f36bf9d53e238667379213a99c9c784ccd93a7
+Author: Danzarote <luishdaniel@gmail.com>
+Date:   Mon Apr 16 12:17:04 2018 -0400
+
+    Agregada la sobrecarga de operadores, documentacion Doxygen y arreglado el problema de la clase usuario
+
+commit 90e058226456795f34c4bab4f21cab84f90b7879
+Author: MaferG <mariafernandaguerrero.25@gmail.com>
+Date:   Sun Apr 15 17:05:10 2018 -0400
+
+    Documentacion doxygen en todos los codigos
+
+commit 60961270843961e0d6e4eacf972998ad1892411c
+Author: Danzarote <luishdaniel@gmail.com>
+Date:   Fri Apr 13 23:52:33 2018 -0400
+
+    Agregado el password a la clase usuario
+
+commit ed0d30203ef297f76a9dffd345cb747168680629
+Author: Jeremy Roa <jmra0611@gmail.com>
+Date:   Thu Apr 12 17:45:36 2018 -0400
+
+    Revert "Probando"
+    
+    This reverts commit 8b9ddfb6ebbeaaf87779976b67b9c2e56ff26d27.
+
+commit 8b9ddfb6ebbeaaf87779976b67b9c2e56ff26d27
+Author: Jeremy Roa <38190990+jeremyroa@users.noreply.github.com>
+Date:   Thu Apr 12 17:12:18 2018 -0400
+
+    Set theme jekyll-theme-hacker
+
+commit 593e4dc75eeeab5ee2f89b0aedba229b7dcc6fb5
+Author: MaferG <mariafernandaguerrero.25@gmail.com>
+Date:   Wed Apr 11 15:36:01 2018 -0400
+
+    Housing con menos cosas
+
+commit 061ca9ed758b74435de71390472bceb874625f9f
+Author: MaferG <mariafernandaguerrero.25@gmail.com>
+Date:   Wed Apr 11 02:07:31 2018 -0400
+
+    Modificacion del main
+
+commit fea5f0247c4730da994963803e06b50af1015e52
+Author: Jeremy Roa <jmra0611@gmail.com>
+Date:   Tue Apr 10 23:00:15 2018 -0400
+
+    Arreglo de la clase banco by grupo automovil, y version 2 de la clase sistema impuesto, aunque hay ciertas dudas
+
+commit b7bfaefc2c7c40a2c34bdab2e00c194130b4baeb
+Merge: f6bc7e9 3848c7d
+Author: Jeremy Roa <jmra0611@gmail.com>
+Date:   Tue Apr 10 19:45:25 2018 -0400
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 3848c7db8187f48e1a6f3c6b1c473c09539e60ae
+Author: Danzarote <luishdaniel@gmail.com>
+Date:   Tue Apr 10 19:35:38 2018 -0400
+
+    Agregada la fucion de las clases, en Csuser, y agregado el constructor parametrico y el constructor por defecto
+
+commit f6bc7e906ea6e164bc50da0789c1fa463e803a83
+Author: Danzarote <luishdaniel@gmail.com>
+Date:   Mon Apr 9 22:37:05 2018 -0400
+
+    Prueba de creacion y update de la rama Usuario
+
+commit d448c3dda2ab00e3ac86c8fdc53fe7a9fc9c47cb
+Author: Danzarote <luishdaniel@gmail.com>
+Date:   Mon Apr 9 17:24:58 2018 -0400
+
+    prueba
+
+commit 02582c000246bdfccda77456708fb6cd610a90f0
+Author: Danzarote <luishdaniel@gmail.com>
+Date:   Mon Apr 9 17:19:04 2018 -0400
+
+    Probando la rama usuario
+
+commit fa3009d2df307f55ca96ded6f8db77fc15940060
+Author: Danzarote <luishdaniel@gmail.com>
+Date:   Mon Apr 9 17:07:43 2018 -0400
+
+    Probando la creacion de rama usuario
+
+commit beada8cc9e16e46dce7c3e7794dfc872d8d9ab03
+Author: Jeremy Roa <jmra0611@gmail.com>
+Date:   Sun Apr 8 23:32:45 2018 -0400
+
+    Agregando clases bases
+
+commit 2f89dccf18caee2d93a5be0aaa55d10209d0c866
+Author: Danzarote <luishdaniel@gmail.com>
+Date:   Sun Apr 8 23:10:04 2018 -0400
+
+    Probando, probando

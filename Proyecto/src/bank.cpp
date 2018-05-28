@@ -11,11 +11,22 @@
 ///\~English @name Constructor
 
 /// \~English @brief Default Constructor \~Spanish @brief Constructor por defecto
+bool search_numbers(std::string str){
+	for(int i = 0; i < str.size();i++){
+			if(!std::isdigit(str[i])){
+				return false;
+			}
+	}
+	return true;
 
+}
 Cbank_account::Cbank_account() 
 { 		
 	this->balance = 0;
 	this->account_number = "10000000000000000000";
+	this->account_type = "Corriente";
+	this->id = "12345678";
+	this->email = "fake@gmail.com";
 }
 
 /// \~English @brief Parametric Constructor \~Spanish @brief Constructor parametrico
@@ -23,10 +34,13 @@ Cbank_account::Cbank_account()
 /// \~English @param balance \~Spanish @param doble 
 /// \~English @param doble \~Spanish @param Doble precision
 
-Cbank_account::Cbank_account(double bal,std::string acc)
+Cbank_account::Cbank_account(double bal,std::string acc,std::string type,std::string b_id,std::string ema)
 {
 	this->set_balance(bal);
 	this->set_account_number(acc);
+	this->set_account_type(type);
+	this->set_id(b_id);
+	this->set_email(ema);
 
 }
 /// \~English @brief Copied Constructor \~Spanish @brief  Constructor por copia
@@ -35,7 +49,10 @@ Cbank_account::Cbank_account(double bal,std::string acc)
 Cbank_account::Cbank_account(const Cbank_account& cuen)
 {
 	this->balance = cuen.balance;
-	this->account_number= cuen.account_number; 
+	this->account_number= cuen.account_number;
+	this->account_type = cuen.account_type;
+	this->id = cuen.id;
+	this->email = cuen.email; 
 }
 
 /// \~Spanish @name Observadores 
@@ -58,6 +75,18 @@ std::string Cbank_account::get_account_number() const
 	return(this->account_number);
 }
 
+std::string Cbank_account::get_account_type() const
+{
+	return(this->account_type);
+}
+std::string Cbank_account::get_id() const
+{
+	return this->id;
+}
+std::string Cbank_account::get_email() const
+{
+	return this->email;
+}
 /// \~Spanish @name Actuadores 
 ///\~English @name Setters
 
@@ -79,14 +108,43 @@ void Cbank_account::set_balance (const double bal)
 
 void Cbank_account::set_account_number(const std::string acc)
 {
-	if(acc.size() == 7){
+	if((acc.size() == 20) and (search_numbers(acc))){
 		this->account_number = acc;
 	}
 	else{
 		throw std::invalid_argument("Invalided account");
 	}
 }
+void Cbank_account::set_account_type (const std::string type)
+{
+	if((type == "Ahorro") or (type == "Corriente"))
+	{
+		this->account_type = type;
+	}
+	else
+	{
+		throw std::invalid_argument("Invalided type account");
+	}
+}
 
+void Cbank_account::set_id (const std::string b_id)
+{
+	if((b_id.size() == 8) and (search_numbers(b_id))){
+		this->id = b_id;
+	}else
+	{
+		throw std::invalid_argument("Invalided ID");
+	}
+}
+void Cbank_account::set_email (const std::string ema)
+{
+	if((ema.find(".com") == ema.size()-4) and ((ema.find('@') < ema.size()-5)))
+	{
+		this->email = ema;
+	}else{
+		throw std::invalid_argument("Invalid email");
+	}
+}
 /// \~Spanish @name Sobrecarga de operadores  
 ///\~English @name Operator's overload
 

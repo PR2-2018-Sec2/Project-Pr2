@@ -11,17 +11,19 @@
 #include <user.h>
 #include <iostream>
 
+
+
 /// \~Spanish @name Constructores
 /// \~English @name Constructor
 
 /// \~English @brief Default Constructor \~Spanish @brief Constructor por defecto
 Cuser::Cuser()
 {
-        this->id = 00000001;
+        this->id = "12345678";
         this->name = "NAME";
         this->lname = "LASTNAME";
         this->age = 19;
-        this->sex = 'O';
+        this->sex = '0';
         this->password = "NULL";
 }
 
@@ -33,7 +35,7 @@ Cuser::Cuser()
 /// \~Spanish @param age entero sin signo \~English @param lname unsigned int
 /// \~Spanish @param sex cadena\~English @param sex string
 /// \~Spanish @param password cadena \~English @param password cadena
-Cuser::Cuser(long unsigned int a, std::string b, std::string c, unsigned int d, char e, std::string f)
+Cuser::Cuser(std::string a, std::string b, std::string c, unsigned int d, char e, std::string f)
 {
         this->set_id(a);
         this->set_name(b);
@@ -63,7 +65,7 @@ Cuser::~Cuser() {}
 
 /// \~Spanish @brief Ver id  \~English @brief Get id
 /// \~Spanish @return id actual  \~English @return Current id
-long unsigned int Cuser::get_id() const
+std::string Cuser::get_id() const
 {
         return this->id;
 }
@@ -141,11 +143,12 @@ void Cuser::set_sex(char s)
 }
 
 /// \~Spanish  @brief Cambiar id \~English @brief Changing id value
-/// \~Spanish @param Entero sin signo largo \~English @param long unsigned int
-void Cuser::set_id(long unsigned int i)
+/// \~Spanish @param Entero sin signo largo \~English @param std::string
+void Cuser::set_id(std::string i)
 {
-        if (i > 0)
+        if ((i.size() == 8)and (search_numbers(i)))
                 this->id = i;
+        else throw std::invalid_argument("Invalided ID");
 }
 
 /// \~Spanish  @brief Cambiar clave \~English @brief Changing password value

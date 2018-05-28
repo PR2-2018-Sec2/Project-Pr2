@@ -41,14 +41,14 @@
 #include <automobile.h>
 #include <bank.h>
 #include <housing.h>
+#include <vector>
 
 	class Ctax_user: public Cuser
 	{
 	private:
-		long int tax;
+		float tax;
 		
 	public:
-
 		
 		Cautomobile x_auto;
 		Cbank_account x_account;
@@ -63,12 +63,20 @@
 		~Ctax_user(){};
 
 		// \~Spanish Observadores \~English Getters
-		long int get_tax() const;
+		float get_tax() const;
 
 		// \~Spanish Actuadores \~English Setters
-		void set_tax(long int);
+		void set_tax(float);
+
+	    bool decl_automobile(Cautomobile);
+        bool decl_housing(CHousing);
+        bool add_account(Cbank_account);
+
+		bool verify_account(Cbank_account);	
 
 	};
+
+	
 
 
 #endif

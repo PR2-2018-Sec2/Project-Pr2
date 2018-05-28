@@ -1,8 +1,0 @@
-digraph "scr" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  dir_a09a778acda43d94416d3f8eb8c590be [shape=box, label="scr", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_a09a778acda43d94416d3f8eb8c590be.html"];
-  dir_d44c64559bbebec7f509842c48db8b23 [shape=box label="include" URL="dir_d44c64559bbebec7f509842c48db8b23.html"];
-  dir_a09a778acda43d94416d3f8eb8c590be->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="5", labeldistance=1.5 headhref="dir_000005_000004.html"];
-}

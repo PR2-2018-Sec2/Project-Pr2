@@ -53,13 +53,14 @@
 
 #ifndef PRUEBA_H
 #define PRUEBA_H
+#include<bank.h>
 #include<iostream>
 
 class Cuser
 {
-	private:
+	protected:
 
-		long unsigned int id;
+		std::string id;
 		std::string name;
 		std::string lname;
 		unsigned int age;
@@ -72,13 +73,13 @@ class Cuser
 
 		Cuser(const Cuser &p);
 		/// \~English Parametric Constructor \~Spanish Constructor parametrico
-		Cuser(long unsigned int ,std::string ,std::string , unsigned int, char, std::string); 
+		Cuser(std::string ,std::string ,std::string , unsigned int, char, std::string); 
 
 		/// \~English @brief Destructor \~Spanish @brief Destructor
 		~Cuser();
 
 		// \~English Getters \~Spanish Observadores
-		long unsigned int get_id()const;
+		std::string get_id()const;
 		unsigned int get_age()const;
 		char get_sex()const;
 		std::string get_name()const;
@@ -86,7 +87,7 @@ class Cuser
 		std::string get_password()const;
 
 		// \~English Setters \~Spanish Actuadores
-		void set_id(long unsigned int);
+		virtual void set_id(std::string);
 		void set_age(unsigned int);
 		void set_sex(char);
 		void set_name(std::string);
