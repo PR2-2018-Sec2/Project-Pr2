@@ -93,14 +93,14 @@ int main()
 	Cbank_account prueba;
 
 	prueba.set_id("08027781");
-	prueba.set_account_number("12345678901234567890");
+	prueba.set_account_number("52345678901234567893");
 
 	sd.cl.add_account(prueba);
 
-	/*prueba.set_id("26021817");
-	prueba.set_account_number("00000000099990000000");
+	/*prueba.set_id("26021817");*/
+	//prueba.set_account_number("00000000099990000000");
 
-	sd.cl.add_account(prueba);*/
+    //sd.cl.add_account(prueba);
 
 	//create_arc(x_account1))
 	//data(x_account1);

@@ -64,7 +64,6 @@
 	
     bool Ctax_user::add_account(Cbank_account acc)
     {
-
 		verify_account(acc);
 
 		if ((acc.get_id() == this->get_id()) and (verify_account(acc) == true))
@@ -82,14 +81,14 @@
 
 			arch.close();
 
-			std::cout << "\nCuenta Bien registrada";
+			std::cout << "Cuenta Bien registrada\n";
 
 			return true;
+		}else{
+
+			std::cout << "Esta en la funcion add_account Problemas al registrar\n";
+			return false;
 		}
-
-		std::cout << "\nProblemas al registrar";
-
-		return false;
     }
 
 	bool Ctax_user::verify_account(Cbank_account acc)
@@ -97,26 +96,47 @@
 		
 		std::string search,id_file = "../database/" + this->get_id() + "/" + this->get_id() + "_b.txt";
 
-		std:: fstream arch;
+		std::fstream arch;
 
-		arch.open(id_file,std::ios::in);
+		arch.open(id_file.c_str());
 				
-		if(arch.fail()) 
+		if(arch.fail() or arch.bad() or (!arch.good())){ 
+			arch >> search;
+			arch.close();
+			std::cout << "problema\n";
 		    return false;
+		}
 
 		arch.clear();
-		
-		while(!arch.eof())
-		{			
-			search.clear();
+		int i = 1, j = 106;
+		while(i < 10 and (arch.peek() != arch.eof()))
+		{
+			if(arch.peek() == arch.eof() or arch.eof()){
+				arch.close();
+				return true;
+			}
+
+			std::cout << i << " " << j*i << '\n'; 
 			std::getline(arch,search,' ');
+			//arch >> search;
+			std::cout << search << '\n';
+
 			if(search == acc.get_account_number())
 			{
 				arch.close();
 				return false;
 			}
-			if(!arch.eof()) arch.seekg((21 * 4));
-		}
+			if(arch.peek() != arch.eof() or (!arch.eof()))
+			{
+				std::cout << (char)(arch.peek()) <<"---\n";
+				arch.seekg((j));
+				std::cout << (char)(arch.peek()) <<"---\n";
+			}
+			else std::cout << "Final de Archivo.\n";
+
+			i++;
+			search.clear();
+		}	
 
 		arch.close();
 		return true;
