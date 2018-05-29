@@ -68,11 +68,17 @@
 		// \~Spanish Actuadores \~English Setters
 		void set_tax(float);
 
+		void set_tax(float,int);
+
 	    bool decl_automobile(Cautomobile);
         bool decl_housing(CHousing);
         bool add_account(Cbank_account);
 
-		bool verify_account(Cbank_account);	
+		bool verify_account(Cbank_account);
+
+		int count_automobile();
+		int count_housing();
+
 
 	};
 

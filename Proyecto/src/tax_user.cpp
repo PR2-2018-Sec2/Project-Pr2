@@ -45,26 +45,144 @@
 
 	/// \~Spanish @brief Cambiar impuesto \~English @brief Changing tax value
 	/// \~Spanish @param cadena\~English @param string
-	void Ctax_user::set_tax(float u_tax){
+	void Ctax_user::set_tax(float u_tax)
+	{
 		if(u_tax >= 0)
 		  this-> tax = u_tax;
 		else throw std::invalid_argument("Invalid Tax");
 	}
 
-    bool Ctax_user::decl_automobile(Cautomobile)
+    void Ctax_user::set_tax(float u_tax,int mode)
+	{
+	    std::hash<std::string> ar;
+        std::string asr = this->get_id();
+            
+		int pos = ar(asr) % 10000;
+		
+		std::fstream arch_2;
+
+		double aux;
+            
+		arch_2.open("../database/tax_users.txt");
+            
+		if (!arch_2.is_open())
+            exit(1);
+
+		arch_2.seekp(((pos - 1) * 118) + 100, std::ios::beg);
+
+		arch_2 >> aux;
+
+		arch_2.close(); 
+
+		this->tax = aux;
+		std::cout<<this->tax<<"\n";
+		if(u_tax >= 0)
+		{
+			switch (mode){
+				case 0:
+				this-> tax += u_tax * 0.12;	
+				break;
+				case 1:
+				this-> tax += (u_tax * 0.25);
+				break;
+				case 2:
+				this-> tax += u_tax * 0.10;
+				break;
+				case 3:
+				this-> tax += (u_tax * 0.25);
+				break;
+			}
+					std::cout<<this->tax<<"\n";
+ 
+		}
+		else throw std::invalid_argument("Invalid Tax");
+		
+	}
+
+    bool Ctax_user::decl_automobile(Cautomobile aut)
     {
+		
+			std::string id_file = "../database/" + this->get_id() + "/" + this->get_id() + "_a.txt";
+			std:: fstream arch(id_file,std::ios::in | std::ios::out | std::ios::app);
+
+			if(!arch.is_open()) return false;
+
+	           arch<<std::left << std::setw(22) <<aut.get_brand();
+	           arch<<std::left << std::setw(22) <<aut.get_model();
+	           arch<<std::left << std::setw(22) <<aut.get_lin_plate();
+	           arch<<std::left << std::setw(22) <<aut.get_price();
+	           arch<<std::left << std::setw(22) <<aut.get_year()<<"\n";
+
+			arch.close();
+
+			this->set_tax(aut.get_price(),this->count_automobile());
+
+			std::hash<std::string> ar;
+            std::string asr = this->get_id();
+            
+			int pos = ar(asr) % 10000;
+            
+			std::fstream arch_2;
+            
+			arch_2.open("../database/tax_users.txt");
+            
+			if (!arch_2.is_open())
+                return false;
+
+			arch_2.seekp(((pos - 1) * 118) + 101, std::ios::beg);
+
+			arch_2  << std::left << std::setw(16) << this->get_tax();
+
+			arch_2.close();
+
+			return true;
+
 
     }
 
-    bool Ctax_user::decl_housing(CHousing)
+    bool Ctax_user::decl_housing(CHousing house)
     {
+		
+			std::string id_file = "../database/" + this->get_id() + "/" + this->get_id() + "_h.txt";
+			std:: fstream arch(id_file,std::ios::in | std::ios::out | std::ios::app);
 
+			if(!arch.is_open()) return false;
+
+			arch<<std::left << std::setw(22)<<house.get_type_housing();
+			arch<<std::left << std::setw(22)<<house.get_size();
+			arch<<std::left << std::setw(22)<<house.get_state();
+			arch<<std::left << std::setw(22)<<house.get_valuation();
+			arch<<std::left << std::setw(22)<<house.get_address();
+			arch<<std::left << std::setw(22)<<house.get_city()<<"\n";
+
+			arch.close();
+
+			this->set_tax(house.get_valuation(),this->count_housing());
+
+			std::hash<std::string> ar;
+            std::string asr = this->get_id();
+            
+			int pos = ar(asr) % 10000;
+            
+			std::fstream arch_2;
+            
+			arch_2.open("../database/tax_users.txt");
+            
+			if (!arch_2.is_open())
+                return false;
+
+			arch_2.seekp(((pos - 1) * 118) + 101, std::ios::beg);
+
+			arch_2  << std::left << std::setw(16) << this->get_tax();
+
+			arch_2.close();
+
+			return true;
     }
 
 	
     bool Ctax_user::add_account(Cbank_account acc)
     {
-		verify_account(acc);
 
 		if ((acc.get_id() == this->get_id()) and (verify_account(acc) == true))
 		{
@@ -81,12 +199,10 @@
 
 			arch.close();
 
-			std::cout << "Cuenta Bien registrada\n";
-
 			return true;
+
 		}else{
 
-			std::cout << "Esta en la funcion add_account Problemas al registrar\n";
 			return false;
 		}
     }
@@ -94,21 +210,45 @@
 	bool Ctax_user::verify_account(Cbank_account acc)
 	{
 		
-		std::string search,id_file = "../database/" + this->get_id() + "/" + this->get_id() + "_b.txt";
+		std::string search,id_file = "../database/" ,account;
 
-		std::fstream arch;
+		id_file += this->get_id() + "/" + this->get_id() + "_b.txt";
+
+		std::ifstream arch;
 
 		arch.open(id_file.c_str());
 				
-		if(arch.fail() or arch.bad() or (!arch.good())){ 
+		if(!arch.is_open()){ 
 			arch >> search;
 			arch.close();
 			std::cout << "problema\n";
 		    return false;
 		}
 
-		arch.clear();
+        while(!arch.eof())
+		{
+			std::getline(arch,search,'\n');
+			account = search.substr(0, 20);
+
+			if(account == acc.get_account_number())
+			{
+				arch.close();
+			    return false;
+			}
+
+		}
+
+		arch.close();
+		return true;
+
+		/*
+		
+		Necesitaos que nos ayuden a resolverlo con seekg(). Gracias 
+
+
 		int i = 1, j = 106;
+
+
 		while(i < 10 and (arch.peek() != arch.eof()))
 		{
 			if(arch.peek() == arch.eof() or arch.eof()){
@@ -136,8 +276,57 @@
 
 			i++;
 			search.clear();
-		}	
+		}*/	
 
 		arch.close();
 		return true;
 	}
+
+	int Ctax_user::count_automobile()
+	{
+        std::string id_file = "../database/" + this->get_id() + "/" + this->get_id() + "_a.txt",search;
+		std::ifstream arch;
+		int i = 0;
+
+		arch.open(id_file);
+
+		while(!arch.eof())
+		{
+			std::getline(arch,search,'\n');
+			i++;
+			if(i > 2)
+			{
+				arch.close();
+				return 1;
+			}
+		}
+
+		arch.close();
+		return 0;
+	}
+
+	int Ctax_user::count_housing()
+	{
+ 	std::string id_file = "../database/" + this->get_id() + "/" + this->get_id() + "_h.txt",search;
+		std::ifstream arch;
+
+		int i = 0;
+
+		arch.open(id_file);
+
+		while(!arch.eof())
+		{
+			std::getline(arch,search,'\n');
+			i++;
+			if(i > 2)
+			{
+				arch.close();
+				return 3;
+			}
+		}
+
+		arch.close();
+		return 2;
+	}
+
+	

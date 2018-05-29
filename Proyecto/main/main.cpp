@@ -63,7 +63,7 @@ int main()
 {
 
     Ctax_user x_account1;
-	x_account1.set_id("08027781");
+	x_account1.set_id("26214491");
 	x_account1.set_password("A23-5678");
 	x_account1.x_account.set_account_number("12345678901234567890");
 	x_account1.x_auto.set_year(1994);
@@ -91,16 +91,26 @@ int main()
 	sd.cl = x_account1;
 
 	Cbank_account prueba;
+	Cautomobile prueba_auto;
 
-	prueba.set_id("08027781");
-	prueba.set_account_number("52345678901234567893");
+	prueba_auto.set_price(100);
 
-	sd.cl.add_account(prueba);
+	sd.cl.decl_automobile(prueba_auto);
+
+	CHousing prueba_house;
+	prueba_house.set_valuation(300);
+	sd.cl.decl_housing(prueba_house);
+	//prueba.set_id("08027781");
+	//prueba.set_account_number("52345678901234560000");
+
+	//sd.cl.add_account(prueba);
 
 	/*prueba.set_id("26021817");*/
-	//prueba.set_account_number("00000000099990000000");
+	//prueba.set_account_number("00000000099990000111");
 
     //sd.cl.add_account(prueba);
+
+
 
 	//create_arc(x_account1))
 	//data(x_account1);
