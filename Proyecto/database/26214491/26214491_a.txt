@@ -1,0 +1,4 @@
+NULL                  NULL                                        100                   0                     
+NULL                  NULL                                        100                   0                     
+NULL                  NULL                                        100                   0                     
+NULL                  NULL                                        325.12                0                     

@@ -93,12 +93,12 @@ int main()
 	Cbank_account prueba;
 	Cautomobile prueba_auto;
 
-	prueba_auto.set_price(100);
+	prueba_auto.set_price(325.12);
 
 	sd.cl.decl_automobile(prueba_auto);
 
 	CHousing prueba_house;
-	prueba_house.set_valuation(300);
+	prueba_house.set_valuation(100.12);
 	sd.cl.decl_housing(prueba_house);
 	//prueba.set_id("08027781");
 	//prueba.set_account_number("52345678901234560000");

@@ -1,0 +1,4 @@
+House                 100                   Undefined             300                   Undefined             Undefined             
+House                 100                   Undefined             300                   Undefined             Undefined             
+House                 100                   Undefined             300                   Undefined             Undefined             
+House                 100                   Undefined             100.12                Undefined             Undefined             

@@ -80,16 +80,24 @@
 		{
 			switch (mode){
 				case 0:
-				this-> tax += u_tax * 0.12;	
+				std::cout << "carro mode: "<< mode << " "<< this->tax<<'\n';
+				this-> tax += (u_tax * 0.12);
+				std::cout << "carro mode: "<< mode << " "<< this->tax<<'\n';	
 				break;
 				case 1:
+				std::cout << "carro mode: "<< mode << " "<< this->tax<<'\n';
 				this-> tax += (u_tax * 0.25);
+				std::cout << "carro mode: "<< mode << " "<< this->tax<<'\n';
 				break;
 				case 2:
-				this-> tax += u_tax * 0.10;
+				std::cout << "house mode: "<< mode << " "<< this->tax<<'\n';
+				this-> tax += (u_tax * 0.10);
+				std::cout << "house mode: "<< mode << " "<< this->tax<<'\n';				
 				break;
 				case 3:
+				std::cout << "house mode: "<< mode << " "<< this->tax<<'\n';				
 				this-> tax += (u_tax * 0.25);
+				std::cout << "house mode: "<< mode << " "<< this->tax<<'\n';
 				break;
 			}
 					std::cout<<this->tax<<"\n";
@@ -105,7 +113,7 @@
 			std::string id_file = "../database/" + this->get_id() + "/" + this->get_id() + "_a.txt";
 			std:: fstream arch(id_file,std::ios::in | std::ios::out | std::ios::app);
 
-			if(!arch.is_open()) return false;
+			//if(!arch.is_open()) return false;
 
 	           arch<<std::left << std::setw(22) <<aut.get_brand();
 	           arch<<std::left << std::setw(22) <<aut.get_model();
@@ -146,7 +154,7 @@
 			std::string id_file = "../database/" + this->get_id() + "/" + this->get_id() + "_h.txt";
 			std:: fstream arch(id_file,std::ios::in | std::ios::out | std::ios::app);
 
-			if(!arch.is_open()) return false;
+			//if(!arch.is_open()) return false;
 
 			arch<<std::left << std::setw(22)<<house.get_type_housing();
 			arch<<std::left << std::setw(22)<<house.get_size();
@@ -293,12 +301,12 @@
 		while(!arch.eof())
 		{
 			std::getline(arch,search,'\n');
-			i++;
-			if(i > 2)
+			if(i >= 3)
 			{
 				arch.close();
 				return 1;
 			}
+			i++;
 		}
 
 		arch.close();
@@ -317,12 +325,12 @@
 		while(!arch.eof())
 		{
 			std::getline(arch,search,'\n');
-			i++;
-			if(i > 2)
+			if(i >= 3)
 			{
 				arch.close();
 				return 3;
 			}
+			i++;
 		}
 
 		arch.close();
