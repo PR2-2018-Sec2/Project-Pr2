@@ -20,6 +20,8 @@ private slots:
 
     void on_pushButton_salir_clicked();
 
+    void on_pushButton_entrar_clicked();
+
 private:
     Ui::registro *ui;
 };

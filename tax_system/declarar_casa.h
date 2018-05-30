@@ -2,6 +2,8 @@
 #define DECLARAR_CASA_H
 
 #include <QWidget>
+#include <tax_user.h>
+//#include "usuario_menu.h"
 
 namespace Ui {
 class declarar_casa;
@@ -13,6 +15,7 @@ class declarar_casa : public QWidget
 
 public:
     explicit declarar_casa(QWidget *parent = 0);
+    void set_user(Ctax_user*);
     ~declarar_casa();
 
 private slots:
@@ -20,6 +23,7 @@ private slots:
 
 private:
     Ui::declarar_casa *ui;
+    Ctax_user *user_casa;
 };
 
 #endif // DECLARAR_CASA_H

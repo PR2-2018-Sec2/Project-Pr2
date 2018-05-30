@@ -13,12 +13,12 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QRadioButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QVBoxLayout>
@@ -56,9 +56,8 @@ public:
     QSpacerItem *verticalSpacer;
     QSpinBox *spinBox_edad;
     QSpacerItem *verticalSpacer_6;
+    QComboBox *comboBox_sexo;
     QHBoxLayout *horizontalLayout;
-    QRadioButton *radioButton_femenino;
-    QRadioButton *radioButton_masculino;
     QSpacerItem *verticalSpacer_5;
     QLineEdit *lineEdit_contrasena;
     QSpacerItem *verticalSpacer_2;
@@ -75,7 +74,7 @@ public:
     {
         if (registro->objectName().isEmpty())
             registro->setObjectName(QStringLiteral("registro"));
-        registro->resize(336, 486);
+        registro->resize(295, 415);
         horizontalLayout_5 = new QHBoxLayout(registro);
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
         verticalLayout_5 = new QVBoxLayout();
@@ -144,7 +143,7 @@ public:
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        verticalSpacer_9 = new QSpacerItem(138, 13, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        verticalSpacer_9 = new QSpacerItem(138, 4, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         verticalLayout_2->addItem(verticalSpacer_9);
 
@@ -177,6 +176,8 @@ public:
 
         spinBox_edad = new QSpinBox(registro);
         spinBox_edad->setObjectName(QStringLiteral("spinBox_edad"));
+        spinBox_edad->setMinimum(18);
+        spinBox_edad->setMaximum(110);
 
         verticalLayout_2->addWidget(spinBox_edad);
 
@@ -184,22 +185,17 @@ public:
 
         verticalLayout_2->addItem(verticalSpacer_6);
 
+        comboBox_sexo = new QComboBox(registro);
+        comboBox_sexo->setObjectName(QStringLiteral("comboBox_sexo"));
+
+        verticalLayout_2->addWidget(comboBox_sexo);
+
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        radioButton_femenino = new QRadioButton(registro);
-        radioButton_femenino->setObjectName(QStringLiteral("radioButton_femenino"));
-
-        horizontalLayout->addWidget(radioButton_femenino);
-
-        radioButton_masculino = new QRadioButton(registro);
-        radioButton_masculino->setObjectName(QStringLiteral("radioButton_masculino"));
-
-        horizontalLayout->addWidget(radioButton_masculino);
-
 
         verticalLayout_2->addLayout(horizontalLayout);
 
-        verticalSpacer_5 = new QSpacerItem(138, 13, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        verticalSpacer_5 = new QSpacerItem(138, 9, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         verticalLayout_2->addItem(verticalSpacer_5);
 
@@ -208,7 +204,7 @@ public:
 
         verticalLayout_2->addWidget(lineEdit_contrasena);
 
-        verticalSpacer_2 = new QSpacerItem(138, 13, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        verticalSpacer_2 = new QSpacerItem(138, 20, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         verticalLayout_2->addItem(verticalSpacer_2);
 
@@ -283,8 +279,11 @@ public:
         label_sexo->setText(QApplication::translate("registro", "Sexo", 0));
         label_nombre_2->setText(QApplication::translate("registro", "Contrase\303\261a", 0));
         label_confirmar->setText(QApplication::translate("registro", "Confirmar", 0));
-        radioButton_femenino->setText(QApplication::translate("registro", "F", 0));
-        radioButton_masculino->setText(QApplication::translate("registro", "M", 0));
+        comboBox_sexo->clear();
+        comboBox_sexo->insertItems(0, QStringList()
+         << QApplication::translate("registro", "Femenino", 0)
+         << QApplication::translate("registro", "Masculino", 0)
+        );
         pushButton_entrar->setText(QApplication::translate("registro", "Entrar", 0));
         pushButton_salir->setText(QApplication::translate("registro", "Salir", 0));
     } // retranslateUi

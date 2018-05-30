@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <registro.h>
 #include <usuario_menu.h>
+#include <tax_user.h>
 
 namespace Ui {
 class Login;
@@ -16,6 +17,8 @@ class Login : public QDialog
 public:
     explicit Login(QWidget *parent = 0);
     ~Login();
+    void setUserTemporal(std::string);
+
 
 private slots:
     void on_pushButton_salir_clicked();
@@ -28,6 +31,7 @@ private:
     Ui::Login *ui;
     registro *ui_2;
     usuario_menu *ui_3;
+    Ctax_user *userTemporal;
 
 };
 

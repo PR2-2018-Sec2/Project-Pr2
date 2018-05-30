@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>336</width>
-    <height>486</height>
+    <width>295</width>
+    <height>415</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -123,7 +123,7 @@
                  <property name="sizeHint" stdset="0">
                   <size>
                    <width>138</width>
-                   <height>13</height>
+                   <height>4</height>
                   </size>
                  </property>
                 </spacer>
@@ -177,7 +177,14 @@
                 </spacer>
                </item>
                <item>
-                <widget class="QSpinBox" name="spinBox_edad"/>
+                <widget class="QSpinBox" name="spinBox_edad">
+                 <property name="minimum">
+                  <number>18</number>
+                 </property>
+                 <property name="maximum">
+                  <number>110</number>
+                 </property>
+                </widget>
                </item>
                <item>
                 <spacer name="verticalSpacer_6">
@@ -193,22 +200,21 @@
                 </spacer>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout">
+                <widget class="QComboBox" name="comboBox_sexo">
                  <item>
-                  <widget class="QRadioButton" name="radioButton_femenino">
-                   <property name="text">
-                    <string>F</string>
-                   </property>
-                  </widget>
+                  <property name="text">
+                   <string>Femenino</string>
+                  </property>
                  </item>
                  <item>
-                  <widget class="QRadioButton" name="radioButton_masculino">
-                   <property name="text">
-                    <string>M</string>
-                   </property>
-                  </widget>
+                  <property name="text">
+                   <string>Masculino</string>
+                  </property>
                  </item>
-                </layout>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout"/>
                </item>
                <item>
                 <spacer name="verticalSpacer_5">
@@ -218,7 +224,7 @@
                  <property name="sizeHint" stdset="0">
                   <size>
                    <width>138</width>
-                   <height>13</height>
+                   <height>9</height>
                   </size>
                  </property>
                 </spacer>
@@ -234,7 +240,7 @@
                  <property name="sizeHint" stdset="0">
                   <size>
                    <width>138</width>
-                   <height>13</height>
+                   <height>20</height>
                   </size>
                  </property>
                 </spacer>

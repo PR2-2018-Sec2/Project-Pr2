@@ -29,7 +29,7 @@ QT_BEGIN_NAMESPACE
 class Ui_agregar_cuenta_bancaria
 {
 public:
-    QWidget *widget;
+    QWidget *layoutWidget;
     QGridLayout *gridLayout;
     QLabel *label;
     QSpacerItem *horizontalSpacer;
@@ -41,29 +41,29 @@ public:
     QLabel *label_email;
     QLabel *label_banco;
     QVBoxLayout *verticalLayout;
-    QLineEdit *lineEdit_numero_de_cuenta;
-    QComboBox *comboBox_tipo_de_cuenta;
+    QLineEdit *lineEdit_numeroCuenta;
+    QComboBox *comboBox_tipoCuenta;
     QLineEdit *lineEdit_cedula;
     QLineEdit *lineEdit_email;
     QComboBox *comboBox_banco;
     QSpacerItem *horizontalSpacer_5;
     QHBoxLayout *horizontalLayout_2;
-    QPushButton *pushButton_guardar;
-    QPushButton *pushButton_cancelar;
+    QPushButton *pushButton;
+    QPushButton *pushButton_2;
     QSpacerItem *horizontalSpacer_4;
 
     void setupUi(QWidget *agregar_cuenta_bancaria)
     {
         if (agregar_cuenta_bancaria->objectName().isEmpty())
             agregar_cuenta_bancaria->setObjectName(QStringLiteral("agregar_cuenta_bancaria"));
-        agregar_cuenta_bancaria->resize(252, 300);
-        widget = new QWidget(agregar_cuenta_bancaria);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(20, 10, 210, 282));
-        gridLayout = new QGridLayout(widget);
+        agregar_cuenta_bancaria->resize(242, 301);
+        layoutWidget = new QWidget(agregar_cuenta_bancaria);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(20, 10, 201, 282));
+        gridLayout = new QGridLayout(layoutWidget);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        label = new QLabel(widget);
+        label = new QLabel(layoutWidget);
         label->setObjectName(QStringLiteral("label"));
         label->setAlignment(Qt::AlignCenter);
 
@@ -77,27 +77,27 @@ public:
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        label_numero_de_cuenta = new QLabel(widget);
+        label_numero_de_cuenta = new QLabel(layoutWidget);
         label_numero_de_cuenta->setObjectName(QStringLiteral("label_numero_de_cuenta"));
 
         verticalLayout_2->addWidget(label_numero_de_cuenta);
 
-        label_tipo_de_cuenta = new QLabel(widget);
+        label_tipo_de_cuenta = new QLabel(layoutWidget);
         label_tipo_de_cuenta->setObjectName(QStringLiteral("label_tipo_de_cuenta"));
 
         verticalLayout_2->addWidget(label_tipo_de_cuenta);
 
-        label_cedula = new QLabel(widget);
+        label_cedula = new QLabel(layoutWidget);
         label_cedula->setObjectName(QStringLiteral("label_cedula"));
 
         verticalLayout_2->addWidget(label_cedula);
 
-        label_email = new QLabel(widget);
+        label_email = new QLabel(layoutWidget);
         label_email->setObjectName(QStringLiteral("label_email"));
 
         verticalLayout_2->addWidget(label_email);
 
-        label_banco = new QLabel(widget);
+        label_banco = new QLabel(layoutWidget);
         label_banco->setObjectName(QStringLiteral("label_banco"));
 
         verticalLayout_2->addWidget(label_banco);
@@ -107,27 +107,27 @@ public:
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        lineEdit_numero_de_cuenta = new QLineEdit(widget);
-        lineEdit_numero_de_cuenta->setObjectName(QStringLiteral("lineEdit_numero_de_cuenta"));
+        lineEdit_numeroCuenta = new QLineEdit(layoutWidget);
+        lineEdit_numeroCuenta->setObjectName(QStringLiteral("lineEdit_numeroCuenta"));
 
-        verticalLayout->addWidget(lineEdit_numero_de_cuenta);
+        verticalLayout->addWidget(lineEdit_numeroCuenta);
 
-        comboBox_tipo_de_cuenta = new QComboBox(widget);
-        comboBox_tipo_de_cuenta->setObjectName(QStringLiteral("comboBox_tipo_de_cuenta"));
+        comboBox_tipoCuenta = new QComboBox(layoutWidget);
+        comboBox_tipoCuenta->setObjectName(QStringLiteral("comboBox_tipoCuenta"));
 
-        verticalLayout->addWidget(comboBox_tipo_de_cuenta);
+        verticalLayout->addWidget(comboBox_tipoCuenta);
 
-        lineEdit_cedula = new QLineEdit(widget);
+        lineEdit_cedula = new QLineEdit(layoutWidget);
         lineEdit_cedula->setObjectName(QStringLiteral("lineEdit_cedula"));
 
         verticalLayout->addWidget(lineEdit_cedula);
 
-        lineEdit_email = new QLineEdit(widget);
+        lineEdit_email = new QLineEdit(layoutWidget);
         lineEdit_email->setObjectName(QStringLiteral("lineEdit_email"));
 
         verticalLayout->addWidget(lineEdit_email);
 
-        comboBox_banco = new QComboBox(widget);
+        comboBox_banco = new QComboBox(layoutWidget);
         comboBox_banco->setObjectName(QStringLiteral("comboBox_banco"));
 
         verticalLayout->addWidget(comboBox_banco);
@@ -144,15 +144,15 @@ public:
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        pushButton_guardar = new QPushButton(widget);
-        pushButton_guardar->setObjectName(QStringLiteral("pushButton_guardar"));
+        pushButton = new QPushButton(layoutWidget);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
 
-        horizontalLayout_2->addWidget(pushButton_guardar);
+        horizontalLayout_2->addWidget(pushButton);
 
-        pushButton_cancelar = new QPushButton(widget);
-        pushButton_cancelar->setObjectName(QStringLiteral("pushButton_cancelar"));
+        pushButton_2 = new QPushButton(layoutWidget);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
 
-        horizontalLayout_2->addWidget(pushButton_cancelar);
+        horizontalLayout_2->addWidget(pushButton_2);
 
 
         gridLayout->addLayout(horizontalLayout_2, 4, 0, 1, 1);
@@ -178,8 +178,8 @@ public:
         label_cedula->setText(QApplication::translate("agregar_cuenta_bancaria", "Cedula", 0));
         label_email->setText(QApplication::translate("agregar_cuenta_bancaria", "Email", 0));
         label_banco->setText(QApplication::translate("agregar_cuenta_bancaria", "Banco", 0));
-        comboBox_tipo_de_cuenta->clear();
-        comboBox_tipo_de_cuenta->insertItems(0, QStringList()
+        comboBox_tipoCuenta->clear();
+        comboBox_tipoCuenta->insertItems(0, QStringList()
          << QApplication::translate("agregar_cuenta_bancaria", "Ahorro", 0)
          << QApplication::translate("agregar_cuenta_bancaria", "Corriente", 0)
         );
@@ -197,8 +197,8 @@ public:
          << QApplication::translate("agregar_cuenta_bancaria", "Banco BIcentenario", 0)
          << QApplication::translate("agregar_cuenta_bancaria", "Banco Exterior", 0)
         );
-        pushButton_guardar->setText(QApplication::translate("agregar_cuenta_bancaria", "Guardar", 0));
-        pushButton_cancelar->setText(QApplication::translate("agregar_cuenta_bancaria", "Cancelar", 0));
+        pushButton->setText(QApplication::translate("agregar_cuenta_bancaria", "Guardar", 0));
+        pushButton_2->setText(QApplication::translate("agregar_cuenta_bancaria", "Cancelar", 0));
     } // retranslateUi
 
 };

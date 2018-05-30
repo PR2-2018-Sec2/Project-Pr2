@@ -6,19 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>252</width>
-    <height>300</height>
+    <width>242</width>
+    <height>301</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
      <y>10</y>
-     <width>210</width>
+     <width>201</width>
      <height>282</height>
     </rect>
    </property>
@@ -92,10 +92,10 @@ Cuenta</string>
       <item>
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
-         <widget class="QLineEdit" name="lineEdit_numero_de_cuenta"/>
+         <widget class="QLineEdit" name="lineEdit_numeroCuenta"/>
         </item>
         <item>
-         <widget class="QComboBox" name="comboBox_tipo_de_cuenta">
+         <widget class="QComboBox" name="comboBox_tipoCuenta">
           <item>
            <property name="text">
             <string>Ahorro</string>
@@ -193,14 +193,14 @@ Cuenta</string>
     <item row="4" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
-       <widget class="QPushButton" name="pushButton_guardar">
+       <widget class="QPushButton" name="pushButton">
         <property name="text">
          <string>Guardar</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_cancelar">
+       <widget class="QPushButton" name="pushButton_2">
         <property name="text">
          <string>Cancelar</string>
         </property>
