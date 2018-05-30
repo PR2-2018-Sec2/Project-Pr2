@@ -17,6 +17,8 @@
 #include <functional>
 #include <cstdlib>
 #include <sys/stat.h>
+#include <QDebug>
+
 
 	/// \~Spanish @name Constructores 
 	///\~English @name Constructor
@@ -207,7 +209,9 @@
 			std::string id_file = "../database/" + this->get_id() + "/" + this->get_id() + "_b.txt";
 			std:: fstream arch(id_file,std::ios::in | std::ios::out | std::ios::app);
 
-			if(!arch.is_open()) return false;
+            qDebug() << "id_file.c_str(";
+
+            if(!arch.is_open()) return false;
 
 			arch<<std::left << std::setw(21)<<acc.get_account_number();
 			arch<<std::left << std::setw(21)<<acc.get_balance();	        

@@ -185,7 +185,7 @@ int Cuser::set_id(std::string i)
 int Cuser::set_password(std::string x)
 {
 
-        if (x.size() >= 8)
+        if (x.size() == 8)
         {
                 if (x.find_first_of(" ") != std::string::npos)
                 {

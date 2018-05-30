@@ -6,223 +6,227 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>257</width>
-    <height>300</height>
+    <width>367</width>
+    <height>334</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>10</y>
-     <width>221</width>
-     <height>282</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>Agregar Cuenta Bancaria</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <spacer name="horizontalSpacer">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="2" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_2">
-        <item>
-         <widget class="QLabel" name="label_numero_de_cuenta">
-          <property name="text">
-           <string>Numero de
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Agregar Cuenta Bancaria</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="2" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_numero_de_cuenta">
+           <property name="text">
+            <string>Numero de
 Cuenta</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_tipo_de_cuenta">
-          <property name="text">
-           <string>Tipo de
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_tipo_de_cuenta">
+           <property name="text">
+            <string>Tipo de
 Cuenta</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_cedula">
-          <property name="text">
-           <string>Cedula</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_email">
-          <property name="text">
-           <string>Email</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_banco">
-          <property name="text">
-           <string>Banco</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <item>
-         <widget class="QLineEdit" name="lineEdit_numeroCuenta"/>
-        </item>
-        <item>
-         <widget class="QComboBox" name="comboBox_tipoCuenta">
-          <item>
-           <property name="text">
-            <string>Ahorro</string>
            </property>
-          </item>
-          <item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_cedula">
            <property name="text">
-            <string>Corriente</string>
+            <string>Cedula</string>
            </property>
-          </item>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lineEdit_cedula"/>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lineEdit_email"/>
-        </item>
-        <item>
-         <widget class="QComboBox" name="comboBox_banco">
-          <item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_banco">
            <property name="text">
-            <string>Banco de Venezuela</string>
+            <string>Banco</string>
            </property>
-          </item>
-          <item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_email">
            <property name="text">
-            <string>Banco Mercantil</string>
+            <string>Email</string>
            </property>
-          </item>
-          <item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_balance">
            <property name="text">
-            <string>Banco Banesco</string>
+            <string>Balance</string>
            </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Banco de Occidental de Descuento</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Banco del Tesoro</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Banco Caribe</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>100% Banco</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Banco DelSur</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Banco FondoComun</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Banco BIcentenario</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Banco Exterior</string>
-           </property>
-          </item>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </item>
-    <item row="3" column="0">
-     <spacer name="horizontalSpacer_5">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="4" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QPushButton" name="pushButton">
-        <property name="text">
-         <string>Guardar</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="text">
-         <string>Cancelar</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="5" column="0">
-     <spacer name="horizontalSpacer_4">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-   </layout>
-  </widget>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLineEdit" name="lineEdit_numeroCuenta"/>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_tipoCuenta">
+           <item>
+            <property name="text">
+             <string>Ahorro</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Corriente</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_cedula"/>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_banco">
+           <item>
+            <property name="text">
+             <string>Banco de Venezuela</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Banco Mercantil</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Banco Banesco</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Banco de Occidental de Descuento</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Banco del Tesoro</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Banco Caribe</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>100% Banco</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Banco DelSur</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Banco FondoComun</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Banco BIcentenario</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Banco Exterior</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_email"/>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_balance"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item row="3" column="0">
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="4" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Guardar</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="text">
+          <string>Cancelar</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="5" column="0">
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

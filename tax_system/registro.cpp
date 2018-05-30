@@ -45,7 +45,7 @@ void registro::on_pushButton_entrar_clicked()
 
     if(contrasena != confirmar){
         i = 1;
-        QMessageBox::warning(this,"Error","Datos ingresados no coinicden.\n Revise la contraseña.");
+        QMessageBox::warning(this,"Error","Datos ingresados no coinciden.\n Revise la contraseña.");
     }
     if(aux.set_id(cedula.toStdString()) == -1){
         i = 1;
