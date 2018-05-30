@@ -94,7 +94,8 @@ void Login::on_pushButton_entrar_clicked()
     {
         std::getline(arch,clave,'\n');
 
-        qDebug() << QString::fromStdString(clave.substr(4,8)) << QString::fromStdString(clave.substr(20,8));
+        qDebug() << QString::fromStdString(clave.substr(4,8)) << QString::fromStdString(clave.substr(20,8))
+                 << id << password;
 
 
 

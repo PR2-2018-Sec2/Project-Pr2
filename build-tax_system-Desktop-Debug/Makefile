@@ -14,7 +14,7 @@ CC            = gcc
 CXX           = g++
 DEFINES       = -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -m64 -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-CXXFLAGS      = -m64 -pipe -std=c++11 -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
+CXXFLAGS      = -m64 -pipe -std=c++17 -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 INCPATH       = -I../tax_system -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64
 QMAKE         = /usr/lib/x86_64-linux-gnu/qt5/bin/qmake
 DEL_FILE      = rm -f
@@ -365,12 +365,12 @@ compiler_moc_header_clean:
 moc_login.cpp: ../tax_system/registro.h \
 		../tax_system/usuario_menu.h \
 		../tax_system/add_cuenta_bancaria.h \
-		../tax_system/declarar_automovil.h \
 		../tax_system/tax_user.h \
 		../tax_system/user.h \
 		../tax_system/bank.h \
 		../tax_system/automobile.h \
 		../tax_system/housing.h \
+		../tax_system/declarar_automovil.h \
 		../tax_system/declarar_casa.h \
 		../tax_system/login.h
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/home/jeremy/Documentos/ULA/A2018/PR2/LABORATORIO/Project-Pr2/tax_system -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../tax_system/login.h -o moc_login.cpp
@@ -379,12 +379,12 @@ moc_registro.cpp: ../tax_system/registro.h
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/home/jeremy/Documentos/ULA/A2018/PR2/LABORATORIO/Project-Pr2/tax_system -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../tax_system/registro.h -o moc_registro.cpp
 
 moc_usuario_menu.cpp: ../tax_system/add_cuenta_bancaria.h \
-		../tax_system/declarar_automovil.h \
 		../tax_system/tax_user.h \
 		../tax_system/user.h \
 		../tax_system/bank.h \
 		../tax_system/automobile.h \
 		../tax_system/housing.h \
+		../tax_system/declarar_automovil.h \
 		../tax_system/declarar_casa.h \
 		../tax_system/usuario_menu.h
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/home/jeremy/Documentos/ULA/A2018/PR2/LABORATORIO/Project-Pr2/tax_system -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../tax_system/usuario_menu.h -o moc_usuario_menu.cpp
@@ -405,7 +405,12 @@ moc_declarar_casa.cpp: ../tax_system/tax_user.h \
 		../tax_system/declarar_casa.h
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/home/jeremy/Documentos/ULA/A2018/PR2/LABORATORIO/Project-Pr2/tax_system -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../tax_system/declarar_casa.h -o moc_declarar_casa.cpp
 
-moc_add_cuenta_bancaria.cpp: ../tax_system/add_cuenta_bancaria.h
+moc_add_cuenta_bancaria.cpp: ../tax_system/tax_user.h \
+		../tax_system/user.h \
+		../tax_system/bank.h \
+		../tax_system/automobile.h \
+		../tax_system/housing.h \
+		../tax_system/add_cuenta_bancaria.h
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/home/jeremy/Documentos/ULA/A2018/PR2/LABORATORIO/Project-Pr2/tax_system -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../tax_system/add_cuenta_bancaria.h -o moc_add_cuenta_bancaria.cpp
 
 compiler_moc_source_make_all:
@@ -445,12 +450,12 @@ main.o: ../tax_system/main.cpp ../tax_system/login.h \
 		../tax_system/registro.h \
 		../tax_system/usuario_menu.h \
 		../tax_system/add_cuenta_bancaria.h \
-		../tax_system/declarar_automovil.h \
 		../tax_system/tax_user.h \
 		../tax_system/user.h \
 		../tax_system/bank.h \
 		../tax_system/automobile.h \
 		../tax_system/housing.h \
+		../tax_system/declarar_automovil.h \
 		../tax_system/declarar_casa.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../tax_system/main.cpp
 
@@ -458,12 +463,12 @@ login.o: ../tax_system/login.cpp ../tax_system/login.h \
 		../tax_system/registro.h \
 		../tax_system/usuario_menu.h \
 		../tax_system/add_cuenta_bancaria.h \
-		../tax_system/declarar_automovil.h \
 		../tax_system/tax_user.h \
 		../tax_system/user.h \
 		../tax_system/bank.h \
 		../tax_system/automobile.h \
 		../tax_system/housing.h \
+		../tax_system/declarar_automovil.h \
 		../tax_system/declarar_casa.h \
 		ui_login.h \
 		../tax_system/tax_system.h \
@@ -483,12 +488,12 @@ registro.o: ../tax_system/registro.cpp ../tax_system/registro.h \
 
 usuario_menu.o: ../tax_system/usuario_menu.cpp ../tax_system/usuario_menu.h \
 		../tax_system/add_cuenta_bancaria.h \
-		../tax_system/declarar_automovil.h \
 		../tax_system/tax_user.h \
 		../tax_system/user.h \
 		../tax_system/bank.h \
 		../tax_system/automobile.h \
 		../tax_system/housing.h \
+		../tax_system/declarar_automovil.h \
 		../tax_system/declarar_casa.h \
 		ui_usuario_menu.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o usuario_menu.o ../tax_system/usuario_menu.cpp
@@ -549,7 +554,20 @@ tax_system.o: ../tax_system/tax_system.cpp ../tax_system/tax_system.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o tax_system.o ../tax_system/tax_system.cpp
 
 add_cuenta_bancaria.o: ../tax_system/add_cuenta_bancaria.cpp ../tax_system/add_cuenta_bancaria.h \
-		ui_add_cuenta_bancaria.h
+		../tax_system/tax_user.h \
+		../tax_system/user.h \
+		../tax_system/bank.h \
+		../tax_system/automobile.h \
+		../tax_system/housing.h \
+		ui_add_cuenta_bancaria.h \
+		../tax_system/tax_system.h \
+		../tax_system/administrator.h \
+		../tax_system/login.h \
+		../tax_system/registro.h \
+		../tax_system/usuario_menu.h \
+		../tax_system/declarar_automovil.h \
+		../tax_system/declarar_casa.h \
+		ui_login.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o add_cuenta_bancaria.o ../tax_system/add_cuenta_bancaria.cpp
 
 moc_login.o: moc_login.cpp 
