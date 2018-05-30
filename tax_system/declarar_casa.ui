@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>declarar_casa</class>
+ <widget class="QWidget" name="declarar_casa">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>259</width>
+    <height>273</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>200</width>
+     <height>234</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>Declarar de Inmueble</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Tipo de
+Inmueble</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Tamaño</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Estado</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Ciudad</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Direccion</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Precio</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QComboBox" name="comboBox_tipo_de_inmueble">
+          <item>
+           <property name="text">
+            <string>Casa</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Apartamento</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Townhouse</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Quinta</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Finca</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Rancho con DIrecTV</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Rancho sin DirecTV</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_tamano"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox_estado">
+          <item>
+           <property name="text">
+            <string>Amazonas</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Anzoategui</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Apure</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Aragua</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Barinas</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Bolivar</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Carabobo</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Cojedes</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Delta Amacuro</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Distrito Capital</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Falcon</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Guarico</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Lara</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Merida</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Miranda</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Monagas</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Nueva Esparta</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Portuguesa</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Sucre</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Tachira</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Trujillo</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Vargas</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Yaracuy</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Zulia</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_ciudad"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_direccion"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_precio"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="pushButton_guardar">
+        <property name="text">
+         <string>Guardar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_cancelar">
+        <property name="text">
+         <string>Cancelar</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
