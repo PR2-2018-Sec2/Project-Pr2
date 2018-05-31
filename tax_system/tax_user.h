@@ -57,6 +57,9 @@
 
         /// \~Spanish Constructor por defecto \~English Default constructor
 		Ctax_user();
+
+        Ctax_user(const Ctax_user &);
+
 		//Constructor parametrico funcionando. Nos enredamps y se fue la luz
 		//Este recibe objetos que se instancian y se modifican en el main, para no tener que estar enviando dato por dato y que la definicion sea muy larga
 		//Ctax_user(Cuser, Cautomobile, Cbank_account, Housing);

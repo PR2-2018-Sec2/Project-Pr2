@@ -41,6 +41,7 @@ Cautomobile::Cautomobile(const Cautomobile &u_car)
     this->price = u_car.get_price();
     this->model = u_car.get_model();
     this->year = u_car.get_year();
+    this->lin_plate = u_car.get_lin_plate();
 }
 /// \~Spanish Constructor parametrico \~English Parametric constructor
 /// \~Spanish @comment Inicializa el valor de marca, precio, modelo, año, placa por medio de valores dados por el usuario. \~English @comment Set values brand, price, model, year, lin_plate

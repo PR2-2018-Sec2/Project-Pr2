@@ -13,12 +13,9 @@
 #include <qdebug.h>
 
 bool search_numbers_2(std::string str){
-    qDebug() << "Entro\n";
     int size = str.size();
     for(int i = 0; i < size;i++){
-        qDebug() << "Entro\n" << i;
             if(!std::isdigit(str[i])){
-                qDebug() << "Entro\n";
                 return false;
             }
     }
@@ -182,7 +179,6 @@ int Cuser::set_sex(char s)
 /// \~Spanish @param Entero sin signo largo \~English @param std::string
 int Cuser::set_id(std::string i)
 {
-        qDebug() << "prr";
         if ((i.size() == 8) && (search_numbers_2(i))){
                 this->id = i;
                 return 0;

@@ -15,15 +15,17 @@ class declarar_casa : public QWidget
 
 public:
     explicit declarar_casa(QWidget *parent = 0);
-    void set_user(Ctax_user*);
+    void set_user(Ctax_user);
     ~declarar_casa();
 
 private slots:
     void on_pushButton_cancelar_clicked();
 
+    void on_pushButton_guardar_clicked();
+
 private:
     Ui::declarar_casa *ui;
-    Ctax_user *user_casa;
+    Ctax_user user_casa;
 };
 
 #endif // DECLARAR_CASA_H

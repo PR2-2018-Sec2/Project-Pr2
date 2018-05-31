@@ -14,7 +14,7 @@ class add_cuenta_bancaria : public QWidget
 public:
     explicit add_cuenta_bancaria(QWidget *parent = 0);
     ~add_cuenta_bancaria();
-    void set_user(Ctax_user*);
+    void set_user(Ctax_user);
     std::string get_cedula()const;
 
 
@@ -25,7 +25,7 @@ private slots:
 
 private:
     Ui::add_cuenta_bancaria *ui;
-    Ctax_user *user_banco;
+    Ctax_user user_banco;
     std::string id;
 
 };

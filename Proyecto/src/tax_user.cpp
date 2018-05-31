@@ -113,7 +113,7 @@
 			std::string id_file = "../database/" + this->get_id() + "/" + this->get_id() + "_a.txt";
 			std:: fstream arch(id_file,std::ios::in | std::ios::out | std::ios::app);
 
-			//if(!arch.is_open()) return false;
+			if(!arch.is_open()) return false;
 
 	           arch<<std::left << std::setw(22) <<aut.get_brand();
 	           arch<<std::left << std::setw(22) <<aut.get_model();

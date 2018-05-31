@@ -29,8 +29,23 @@
 		this -> tax = 0;
 		this-> x_auto = Cautomobile();
 		this-> x_account = Cbank_account();
-		this-> x_housing = CHousing();
-	}
+        this-> x_housing = CHousing();
+    }
+
+    Ctax_user::Ctax_user(const Ctax_user &u_tax) :  Cuser()
+    {
+        this-> tax = u_tax.tax;
+        this-> x_auto = u_tax.x_auto;
+        this-> x_account = u_tax.x_account;
+        this-> x_housing = u_tax.x_housing;
+
+        this-> age = u_tax.age;
+        this-> id = u_tax.id;
+        this-> name = u_tax.name;
+        this-> lname = u_tax.lname;
+        this-> sex = u_tax.sex;
+        this-> password = u_tax.password;
+    }
 
 	/// \~Spanish @name Observadores 
 	///\~English @name Getters
@@ -39,7 +54,27 @@
 	/// \~Spanish @return impuesto actual  \~English @return Current tax
 	float Ctax_user::get_tax() const
 	{
-		return this->tax;
+        std::hash<std::string> ar;
+        std::string asr = this->get_id();
+
+        int pos = ar(asr) % 10000;
+
+        std::fstream arch_2;
+
+        float aux;
+
+        arch_2.open("../database/tax_users.txt");
+
+        if (!arch_2.is_open())
+            return(-1);
+
+        arch_2.seekp(((pos - 1) * 118) + 100, std::ios::beg);
+
+        arch_2 >> aux;
+
+        arch_2.close();
+
+        return aux;
 	}
 
 	/// \~Spanish @name Actuadores 
@@ -124,9 +159,9 @@
 		
 			std::string id_file = "../database/" + this->get_id() + "/" + this->get_id() + "_a.txt";
 			std:: fstream arch(id_file,std::ios::in | std::ios::out | std::ios::app);
-
-			//if(!arch.is_open()) return false;
-
+            if(!arch.is_open()) return false;
+                QString a = QString::fromStdString(aut.get_lin_plate());
+                 qDebug() << a;
 	           arch<<std::left << std::setw(22) <<aut.get_brand();
 	           arch<<std::left << std::setw(22) <<aut.get_model();
 	           arch<<std::left << std::setw(22) <<aut.get_lin_plate();
@@ -134,6 +169,7 @@
 	           arch<<std::left << std::setw(22) <<aut.get_year()<<"\n";
 
 			arch.close();
+
 
 			this->set_tax(aut.get_price(),this->count_automobile());
 
@@ -209,9 +245,9 @@
 			std::string id_file = "../database/" + this->get_id() + "/" + this->get_id() + "_b.txt";
 			std:: fstream arch(id_file,std::ios::in | std::ios::out | std::ios::app);
 
-            qDebug() << "id_file.c_str(";
-
             if(!arch.is_open()) return false;
+
+            qDebug() << "id_file.c_str(";
 
 			arch<<std::left << std::setw(21)<<acc.get_account_number();
 			arch<<std::left << std::setw(21)<<acc.get_balance();	        

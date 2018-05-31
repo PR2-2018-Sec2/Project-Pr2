@@ -79,7 +79,7 @@ void registro::on_pushButton_entrar_clicked()
     if(i == 0){
         if(create.register_cl(aux))
         {
-            i = QMessageBox::warning(this,"Registro","Se creo el usuario sastifactoriamente");
+            i = QMessageBox::information(this,"Registro","Se creo el usuario sastifactoriamente");
         }else{
             i = QMessageBox::warning(this,"Error","El usuario ya se encuentra registrado");
 

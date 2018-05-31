@@ -14,7 +14,7 @@ class declarar_automovil : public QWidget
 
 public:
     explicit declarar_automovil(QWidget *parent = 0);
-    void set_user(Ctax_user*);
+    void set_user(Ctax_user);
     ~declarar_automovil();
 
 private slots:
@@ -24,7 +24,7 @@ private slots:
 
 private:
     Ui::declarar_automovil *ui;
-    Ctax_user *user_auto;
+    Ctax_user user_auto;
 };
 
 #endif // DECLARAR_AUTOMOVIL_H

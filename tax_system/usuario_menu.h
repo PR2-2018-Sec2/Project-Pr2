@@ -19,7 +19,7 @@ public:
     explicit usuario_menu(QWidget *parent = 0);
     ~usuario_menu();
    // Ctax_user* get_user()const;
-    void set_user(Ctax_user*);
+    void set_user(Ctax_user);
 
 private slots:
     void on_pushButton_clicked();
@@ -36,7 +36,7 @@ private slots:
 private:
 
     Ui::usuario_menu *ui;
-    Ctax_user *user_menu;
+    Ctax_user user_menu;
     add_cuenta_bancaria *cuenta;
     declarar_automovil *declauto;
     declarar_casa *declcasa;

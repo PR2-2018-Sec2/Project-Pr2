@@ -42,14 +42,13 @@ void Login::setUserTemporal(std::string cad)
     int edad = atoi(edad_s.c_str());
     std::string::size_type sz;
     float tax = std::stof(tax_s,&sz);
-    this->userTemporal = new Ctax_user();
-    this->userTemporal->set_age(edad);
-    this->userTemporal->set_id(cedula);
-    this->userTemporal->set_lname(apellido);
-    this->userTemporal->set_password(contra);
-    this->userTemporal->set_name(nombre);
-    this->userTemporal->set_sex(sexo[0]);
-    this->userTemporal->set_tax(tax);
+    this->userTemporal.set_age(edad);
+    this->userTemporal.set_id(cedula);
+    this->userTemporal.set_lname(apellido);
+    this->userTemporal.set_password(contra);
+    this->userTemporal.set_name(nombre);
+    this->userTemporal.set_sex(sexo[0]);
+    this->userTemporal.set_tax(tax);
     this->ui_3 = new usuario_menu;
     this->ui_3->set_user(this->userTemporal);
 
@@ -57,7 +56,7 @@ void Login::setUserTemporal(std::string cad)
 
 void Login::on_pushButton_salir_clicked()
 {
-    close();
+    hide();
 }
 
 void Login::on_pushButton_registrar_clicked()
@@ -105,7 +104,7 @@ void Login::on_pushButton_entrar_clicked()
 
              this->setUserTemporal(clave);
             //this->ui_3 ->set_contenedor(clave);
-            this->ui_3 -> show();
+            this->ui_3-> show();
 
             QMessageBox::information(this,"Registro","Ingreso Exitoso");
 
@@ -126,14 +125,5 @@ void Login::on_pushButton_entrar_clicked()
         arch.close();
         QMessageBox::information(this,"Informacion","Usuario no registrado");
     }
-
-
-
-
-
-
-
-
-
 
 }

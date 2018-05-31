@@ -129,7 +129,11 @@
                 </spacer>
                </item>
                <item>
-                <widget class="QLineEdit" name="lineEdit_cedula"/>
+                <widget class="QLineEdit" name="lineEdit_cedula">
+                 <property name="maxLength">
+                  <number>9</number>
+                 </property>
+                </widget>
                </item>
                <item>
                 <spacer name="verticalSpacer_8">
@@ -145,7 +149,11 @@
                 </spacer>
                </item>
                <item>
-                <widget class="QLineEdit" name="lineEdit_nombre"/>
+                <widget class="QLineEdit" name="lineEdit_nombre">
+                 <property name="maxLength">
+                  <number>15</number>
+                 </property>
+                </widget>
                </item>
                <item>
                 <spacer name="verticalSpacer_7">
@@ -161,7 +169,11 @@
                 </spacer>
                </item>
                <item>
-                <widget class="QLineEdit" name="lineEdit_apellido"/>
+                <widget class="QLineEdit" name="lineEdit_apellido">
+                 <property name="maxLength">
+                  <number>15</number>
+                 </property>
+                </widget>
                </item>
                <item>
                 <spacer name="verticalSpacer">
@@ -230,7 +242,14 @@
                 </spacer>
                </item>
                <item>
-                <widget class="QLineEdit" name="lineEdit_contrasena"/>
+                <widget class="QLineEdit" name="lineEdit_contrasena">
+                 <property name="maxLength">
+                  <number>8</number>
+                 </property>
+                 <property name="echoMode">
+                  <enum>QLineEdit::Password</enum>
+                 </property>
+                </widget>
                </item>
                <item>
                 <spacer name="verticalSpacer_2">
@@ -246,7 +265,14 @@
                 </spacer>
                </item>
                <item>
-                <widget class="QLineEdit" name="lineEdit_confirmar"/>
+                <widget class="QLineEdit" name="lineEdit_confirmar">
+                 <property name="maxLength">
+                  <number>8</number>
+                 </property>
+                 <property name="echoMode">
+                  <enum>QLineEdit::Password</enum>
+                 </property>
+                </widget>
                </item>
               </layout>
              </item>

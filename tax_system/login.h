@@ -31,7 +31,7 @@ private:
     Ui::Login *ui;
     registro *ui_2;
     usuario_menu *ui_3;
-    Ctax_user *userTemporal;
+    Ctax_user userTemporal;
 
 };
 

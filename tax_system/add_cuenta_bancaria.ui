@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Agregar Cuenta Bancaria</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
@@ -92,7 +92,11 @@ Cuenta</string>
        <item>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
-          <widget class="QLineEdit" name="lineEdit_numeroCuenta"/>
+          <widget class="QLineEdit" name="lineEdit_numeroCuenta">
+           <property name="maxLength">
+            <number>20</number>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QComboBox" name="comboBox_tipoCuenta">
@@ -109,7 +113,11 @@ Cuenta</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_cedula"/>
+          <widget class="QLineEdit" name="lineEdit_cedula">
+           <property name="maxLength">
+            <number>9</number>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QComboBox" name="comboBox_banco">
@@ -130,7 +138,7 @@ Cuenta</string>
            </item>
            <item>
             <property name="text">
-             <string>Banco de Occidental de Descuento</string>
+             <string>B.O.D.</string>
             </property>
            </item>
            <item>
@@ -171,10 +179,18 @@ Cuenta</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_email"/>
+          <widget class="QLineEdit" name="lineEdit_email">
+           <property name="maxLength">
+            <number>20</number>
+           </property>
+          </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_balance"/>
+          <widget class="QDoubleSpinBox" name="lineEdit_balance">
+           <property name="maximum">
+            <double>999999999.990000009536743</double>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>

@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>259</width>
-    <height>273</height>
+    <width>290</width>
+    <height>311</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Declarar Inmueble</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>30</x>
      <y>20</y>
-     <width>200</width>
-     <height>234</height>
+     <width>222</width>
+     <height>264</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout">
@@ -124,7 +124,7 @@ Inmueble</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_tamano"/>
+         <widget class="QSpinBox" name="spinBox_tamanio"/>
         </item>
         <item>
          <widget class="QComboBox" name="comboBox_estado">
@@ -251,13 +251,25 @@ Inmueble</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_ciudad"/>
+         <widget class="QLineEdit" name="lineEdit_ciudad">
+          <property name="maxLength">
+           <number>20</number>
+          </property>
+         </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_direccion"/>
+         <widget class="QLineEdit" name="lineEdit_direccion">
+          <property name="maxLength">
+           <number>20</number>
+          </property>
+         </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_precio"/>
+         <widget class="QDoubleSpinBox" name="doubleSpinBox_price">
+          <property name="maximum">
+           <double>99999999.900000005960464</double>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>

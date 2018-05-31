@@ -11,9 +11,9 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Declarar Automovil</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -121,10 +121,18 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
-         <widget class="QLineEdit" name="lineEdit_marca"/>
+         <widget class="QLineEdit" name="lineEdit_marca">
+          <property name="maxLength">
+           <number>20</number>
+          </property>
+         </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_modelo"/>
+         <widget class="QLineEdit" name="lineEdit_modelo">
+          <property name="maxLength">
+           <number>20</number>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QSpinBox" name="spinBox_ano">
@@ -137,10 +145,18 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_placa"/>
+         <widget class="QLineEdit" name="lineEdit_placa">
+          <property name="maxLength">
+           <number>20</number>
+          </property>
+         </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_precio"/>
+         <widget class="QDoubleSpinBox" name="lineEdit_precio">
+          <property name="maximum">
+           <double>99999999.989999994635582</double>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>

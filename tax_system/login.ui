@@ -103,12 +103,22 @@
              <item>
               <widget class="QLineEdit" name="line_Edit_cedula">
                <property name="text">
-                <string> </string>
+                <string/>
+               </property>
+               <property name="maxLength">
+                <number>9</number>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_password"/>
+              <widget class="QLineEdit" name="lineEdit_password">
+               <property name="maxLength">
+                <number>8</number>
+               </property>
+               <property name="echoMode">
+                <enum>QLineEdit::Password</enum>
+               </property>
+              </widget>
              </item>
             </layout>
            </item>
