@@ -5,6 +5,7 @@
 #include "qdebug.h"
 
 
+
 Login::Login(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Login)
@@ -73,57 +74,143 @@ void Login::on_pushButton_entrar_clicked()
 
     QString password = ui->lineEdit_password->text();
     QString id = ui->line_Edit_cedula->text();
-
-    std::hash<std::string> ar;
-    std::string asr = id.toStdString();
-    int pos = ar(asr) % 10000;
     std::string clave;
 
-    std::fstream arch;
-    arch.open("../database/tax_users.txt");
-    if (!arch.is_open())
-    {
-        arch.close();
-        this->on_pushButton_salir_clicked();
-    }
 
-    arch.seekp((pos - 1) * 118, std::ios::beg);
+    if(id[0]=='V') {
 
-    if (arch.peek() == '0')
-    {
-        std::getline(arch,clave,'\n');
+        //HASH
+        std::hash<std::string> ar;
+        std::string asr = id.toStdString();
+        int pos = ar(asr) % 1000;
+        std::fstream arch;
+        arch.open("../database/administrators.txt");
+        if (!arch.is_open())
+            throw std::invalid_argument("Archivo no abierto") ;
+        arch.seekp((pos - 1) * 118, std::ios::beg);
 
-        qDebug() << QString::fromStdString(clave.substr(4,8)) << QString::fromStdString(clave.substr(20,8))
-                 << id << password;
-
-
-
-        if(clave.substr(4,8) == id.toStdString() && clave.substr(20,8) == password.toStdString())
+        //ACCESO
+        if (arch.peek() == '0')
         {
+            std::getline(arch,clave,'\n');
+
+            qDebug() << QString::fromStdString(clave.substr(4,8)) << QString::fromStdString(clave.substr(20,8))
+                     << id << password;
+
+
+
+            if(clave.substr(4,9) == id.toStdString() && clave.substr(20,8) == password.toStdString())
+            {
+                arch.close();
+                std::string users;
+
+                this->ui_4 = new admin_menu;
+                std::ifstream arch_a;
+                arch_a.open("../database/tax_users.txt");
+                if (!arch_a.is_open())
+                {
+                    arch_a.close();
+                    this->on_pushButton_salir_clicked();
+                }
+                while(!arch_a.eof())
+                {
+                    std::getline(arch_a,users,'\n');
+                    if(users[0]=='0')
+                    {
+
+                        //CODIAR
+                        std::string palabra;
+                        std::string cedula = users.substr(4,8);
+                        std::string nombre = users.substr(52,16);
+                        nombre = eliminarEspacios(nombre);
+                        std::string contra = users.substr(20,8);
+                        std::string apellido = users.substr(68,16);
+                        apellido = eliminarEspacios(apellido);
+                        std::string edad_s = users.substr(84,2);
+                        std::string sexo = users.substr(36,1);
+                        std::string tax_s = users.substr(100,16);
+                        tax_s = eliminarEspacios(tax_s);
+                        palabra = cedula + " " + nombre + " " + apellido + " " + contra + " " + edad_s + " " + sexo + "" + tax_s;
+
+                        this->ui_4->usuarios.push_back(palabra);
+
+
+                    }
+                }
+                arch_a.close();
+
+                this->ui_4->ui_users = new ver_usuarios;
+                this->ui_4->ui_users->get_user = this->ui_4->usuarios;
+
+                this->ui_4 -> show();
+
+                QMessageBox::information(this,"Login ADMIN","Ingreso Exitoso");
+
+                this->on_pushButton_salir_clicked();
+
+            }
+            else
+            {
+                QMessageBox::information(this,"Login","Usuario o clave invalida");
+                arch.close();
+            }
+
             arch.close();
 
-             this->setUserTemporal(clave);
-            //this->ui_3 ->set_contenedor(clave);
-            this->ui_3-> show();
+        }
 
-            QMessageBox::information(this,"Registro","Ingreso Exitoso");
+    }else{
+        std::hash<std::string> ar;
+        std::string asr = id.toStdString();
+        int pos = ar(asr) % 10000;
 
+
+        std::fstream arch;
+        arch.open("../database/tax_users.txt");
+        if (!arch.is_open())
+        {
+            arch.close();
             this->on_pushButton_salir_clicked();
+        }
+
+        arch.seekp((pos - 1) * 118, std::ios::beg);
+
+        if (arch.peek() == '0')
+        {
+            std::getline(arch,clave,'\n');
+
+            qDebug() << QString::fromStdString(clave.substr(4,8)) << QString::fromStdString(clave.substr(20,8))
+                     << id << password;
+
+
+
+            if(clave.substr(4,8) == id.toStdString() && clave.substr(20,8) == password.toStdString())
+            {
+                arch.close();
+
+                 this->setUserTemporal(clave);
+                //this->ui_3 ->set_contenedor(clave);
+                this->ui_3-> show();
+
+                QMessageBox::information(this,"Registro","Ingreso Exitoso");
+
+                this->on_pushButton_salir_clicked();
+
+            }
+            else
+            {
+                QMessageBox::information(this,"Registro","Usuario o clave invalida");
+                arch.close();
+            }
+
+            arch.close();
 
         }
         else
         {
-            QMessageBox::information(this,"Registro","Usuario o clave invalida");
             arch.close();
+            QMessageBox::information(this,"Informacion","Usuario no registrado");
         }
-
-        arch.close();
-
-    }
-    else
-    {
-        arch.close();
-        QMessageBox::information(this,"Informacion","Usuario no registrado");
-    }
+}
 
 }

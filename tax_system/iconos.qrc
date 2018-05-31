@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/icono">
+        <file>bano.png</file>
+        <file>bien2.png</file>
+        <file>cacular.png</file>
+        <file>calcularImpuesto.png</file>
+        <file>carro.png</file>
+        <file>Casa.png</file>
+        <file>apliaionimpuesto.png</file>
+        <file>quitar.png</file>
+        <file>quitar2.png</file>
+        <file>ok3.png</file>
+        <file>ok.png</file>
+        <file>usuario.png</file>
+    </qresource>
+</RCC>

@@ -27,9 +27,9 @@
 
       int Cadministrator::set_id(std::string adm)
       {
-            if ((adm.size() == 9) and (search_numbers(adm.substr(1,9)) and (adm[0] == 'V')))
+            if ((adm.size() == 9) and (search_numbers(adm.substr(1,8)) and (adm[0] == 'V')))
             {
-                this->name = adm;
+                this->id = adm;
                 return 0;
             }
 

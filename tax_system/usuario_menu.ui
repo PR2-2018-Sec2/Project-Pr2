@@ -102,6 +102,10 @@
              <property name="text">
               <string>Agregar Cuenta Bancaria</string>
              </property>
+             <property name="icon">
+              <iconset resource="iconos.qrc">
+               <normaloff>:/icono/bano.png</normaloff>:/icono/bano.png</iconset>
+             </property>
             </widget>
            </item>
            <item>
@@ -109,12 +113,20 @@
              <property name="text">
               <string>Declarar Inmueble</string>
              </property>
+             <property name="icon">
+              <iconset resource="iconos.qrc">
+               <normaloff>:/icono/Casa.png</normaloff>:/icono/Casa.png</iconset>
+             </property>
             </widget>
            </item>
            <item>
             <widget class="QCommandLinkButton" name="commandLinkButton_declarar_automovil">
              <property name="text">
               <string>Declarar Automovil</string>
+             </property>
+             <property name="icon">
+              <iconset resource="iconos.qrc">
+               <normaloff>:/icono/carro.png</normaloff>:/icono/carro.png</iconset>
              </property>
             </widget>
            </item>
@@ -176,6 +188,10 @@
                <property name="text">
                 <string>Ver impuesto</string>
                </property>
+               <property name="icon">
+                <iconset resource="iconos.qrc">
+                 <normaloff>:/icono/calcularImpuesto.png</normaloff>:/icono/calcularImpuesto.png</iconset>
+               </property>
               </widget>
              </item>
              <item>
@@ -195,6 +211,10 @@
               <widget class="QPushButton" name="pushButton">
                <property name="text">
                 <string>Salir</string>
+               </property>
+               <property name="icon">
+                <iconset resource="iconos.qrc">
+                 <normaloff>:/icono/quitar.png</normaloff>:/icono/quitar.png</iconset>
                </property>
               </widget>
              </item>
@@ -236,6 +256,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="iconos.qrc"/>
+ </resources>
  <connections/>
 </ui>

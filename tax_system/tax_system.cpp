@@ -2,7 +2,6 @@
 
 bool verify_database()
 {
-    mkdir("../database", S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
     std::fstream arc("../database/tax_users.txt", std::ios::in);
 
     if (!arc.is_open())

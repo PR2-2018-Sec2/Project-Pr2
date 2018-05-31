@@ -53,12 +53,20 @@
         <property name="text">
          <string>Guardar</string>
         </property>
+        <property name="icon">
+         <iconset resource="iconos.qrc">
+          <normaloff>:/icono/ok.png</normaloff>:/icono/ok.png</iconset>
+        </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_cancelar">
         <property name="text">
          <string>Cancelar</string>
+        </property>
+        <property name="icon">
+         <iconset resource="iconos.qrc">
+          <normaloff>:/icono/ok3.png</normaloff>:/icono/ok3.png</iconset>
         </property>
        </widget>
       </item>
@@ -165,6 +173,8 @@
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="iconos.qrc"/>
+ </resources>
  <connections/>
 </ui>

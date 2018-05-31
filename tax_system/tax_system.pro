@@ -27,7 +27,9 @@ SOURCES += main.cpp\
     tax_user.cpp \
     administrator.cpp \
     tax_system.cpp \
-    add_cuenta_bancaria.cpp
+    add_cuenta_bancaria.cpp \
+    admin_menu.cpp \
+    ver_usuarios.cpp
 
 
 HEADERS  += login.h \
@@ -42,7 +44,9 @@ HEADERS  += login.h \
     tax_user.h \
     administrator.h \
     tax_system.h \
-    add_cuenta_bancaria.h
+    add_cuenta_bancaria.h \
+    admin_menu.h \
+    ver_usuarios.h
 
 
 FORMS    += login.ui \
@@ -50,4 +54,9 @@ FORMS    += login.ui \
     usuario_menu.ui \
     declarar_automovil.ui \
     declarar_casa.ui \
-    add_cuenta_bancaria.ui
+    add_cuenta_bancaria.ui \
+    admin_menu.ui \
+    ver_usuarios.ui
+
+RESOURCES += \
+    iconos.qrc

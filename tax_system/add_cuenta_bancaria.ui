@@ -216,12 +216,20 @@ Cuenta</string>
          <property name="text">
           <string>Guardar</string>
          </property>
+         <property name="icon">
+          <iconset resource="iconos.qrc">
+           <normaloff>:/icono/ok.png</normaloff>:/icono/ok.png</iconset>
+         </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton_2">
          <property name="text">
           <string>Cancelar</string>
+         </property>
+         <property name="icon">
+          <iconset resource="iconos.qrc">
+           <normaloff>:/icono/quitar.png</normaloff>:/icono/quitar.png</iconset>
          </property>
         </widget>
        </item>
@@ -244,6 +252,8 @@ Cuenta</string>
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="iconos.qrc"/>
+ </resources>
  <connections/>
 </ui>

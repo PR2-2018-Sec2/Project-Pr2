@@ -5,6 +5,8 @@
 #include <registro.h>
 #include <usuario_menu.h>
 #include <tax_user.h>
+#include <admin_menu.h>
+#include <ver_usuarios.h>
 
 namespace Ui {
 class Login;
@@ -32,7 +34,7 @@ private:
     registro *ui_2;
     usuario_menu *ui_3;
     Ctax_user userTemporal;
-
+    admin_menu *ui_4;
 };
 
 #endif // LOGIN_H

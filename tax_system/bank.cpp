@@ -12,7 +12,7 @@
 
 /// \~English @brief Default Constructor \~Spanish @brief Constructor por defecto
 bool search_numbers(std::string str){
-    for(unsigned int i = 0; i < str.size();i++){
+    for(int i = 0; i < str.size();i++){
 			if(!std::isdigit(str[i])){
 				return false;
 			}

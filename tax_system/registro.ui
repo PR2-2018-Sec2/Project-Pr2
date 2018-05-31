@@ -300,6 +300,10 @@
              <property name="text">
               <string>Entrar</string>
              </property>
+             <property name="icon">
+              <iconset resource="iconos.qrc">
+               <normaloff>:/icono/bien2.png</normaloff>:/icono/bien2.png</iconset>
+             </property>
             </widget>
            </item>
            <item>
@@ -319,6 +323,10 @@
             <widget class="QPushButton" name="pushButton_salir">
              <property name="text">
               <string>Salir</string>
+             </property>
+             <property name="icon">
+              <iconset resource="iconos.qrc">
+               <normaloff>:/icono/ok3.png</normaloff>:/icono/ok3.png</iconset>
              </property>
             </widget>
            </item>
@@ -358,6 +366,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="iconos.qrc"/>
+ </resources>
  <connections/>
 </ui>
