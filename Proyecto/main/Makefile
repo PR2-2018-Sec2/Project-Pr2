@@ -1,7 +1,7 @@
 CXX = g++ -std=c++11
 INCLUDE = -I../include/
 SOURCES = ../src/
-CFLAGS = -g -c
+CFLAGS =  -g -c
 
 all: main.exe
 
